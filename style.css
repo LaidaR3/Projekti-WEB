@@ -103,6 +103,15 @@ body{
     height: 320px;
     width: 250px;
     margin-bottom: 275px;
+    position: relative;
+    animation-name: img1;
+    animation: img1 5s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img1 {
+    from {top: 200px;}
+    to {top: 0px;}
 }
 
 .first-p{
@@ -147,10 +156,18 @@ body{
 .img2 img{
     display: flex;
     justify-content: right;
-    align-items: right;
-    height: 290px;
+    height: 300px;
     width: 200px;
-    margin-top: 220px;
+    margin-top: 40px;
+    position: relative;
+    animation-name: img2;
+    animation: img2 5s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img2 {
+    from {top: 0px;}
+    to {top: 200px;}
 }
 
 
