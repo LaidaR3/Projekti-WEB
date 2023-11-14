@@ -1,11 +1,14 @@
 body{
     font-family: 'Crimson Text', serif;
+    font-weight: 200;
 }
 
 *{
     margin: 0%;
     padding: 0%;
 }
+
+/*header*/
 
 .headerContainer{
     display: flex;
@@ -42,10 +45,16 @@ body{
     margin-right: 35px;
 }
 
+.active a{
+    color: #eeb699;
+}
+
 .headerContainer ul li a{
     text-decoration: none;
     color: #343536;
+
 }
+
 
 .headerContainer ul li a:hover{
     color: #ef8346;
@@ -84,7 +93,9 @@ body{
     color: #343536;
 }
 
-.s{
+/*First section*/
+
+.first-section{
     margin-top: 50px;
     display: flex;
     flex-direction: row;
@@ -97,21 +108,9 @@ body{
 }
 
 .img1 img{
-    display: flex;
-    justify-content: right;
-    align-items: right;
     height: 320px;
     width: 250px;
-    margin-bottom: 275px;
-    position: relative;
-    animation-name: img1;
-    animation: img1 5s ;
-    animation-fill-mode: forwards;
-}
-
-@keyframes img1 {
-    from {top: 200px;}
-    to {top: 0px;}
+    margin-bottom: 135px;
 }
 
 .first-p{
@@ -131,21 +130,24 @@ body{
     display: flex;
     padding: 20px;
     text-align: center;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
     line-height: 1.5;
-    color: #5b5b5b;
+    color: #5c5c5c;
     font-size: 20px;
     
 }
 
-#heading1{
+ .first-p h3{
     display: flex;
     justify-content: center;
     font-size: 60px;
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     line-height: 1;
     font-style: italic;
+    font-weight: 100;
+    font-size: 45px;
     color: #343536;
 }
 
@@ -154,21 +156,12 @@ body{
 }
 
 .img2 img{
-    display: flex;
-    justify-content: right;
     height: 300px;
     width: 200px;
-    margin-top: 40px;
-    position: relative;
-    animation-name: img2;
-    animation: img2 5s ;
-    animation-fill-mode: forwards;
+    margin-top: 90px;
+    
 }
 
-@keyframes img2 {
-    from {top: 0px;}
-    to {top: 200px;}
-}
 
 
 
@@ -180,7 +173,7 @@ body{
 	align-items: center;
 	align-content: space-evenly;
     width: 120px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding: 20px;
     font-size: 15px;
     border: none;
@@ -194,3 +187,132 @@ body{
     color: #343536;
     transition: 0.3s;
 }
+
+
+/*Second Section*/
+
+.second-section{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#h1-2{ 
+    display: flex;
+    justify-content: left;
+    color:#eeb699;
+    font-style: italic;
+    font-size: 100px;
+    margin-left: 60px;
+    font-weight: 1;
+    
+}
+
+.paragraphs2{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: space-evenly;
+    margin-top: 30px;
+}
+
+.p1-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraphs2 h2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: 50;
+    
+    color: #343536;
+}
+
+.paragraphs2 p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    color: #5c5c5c;
+    font-size: 20px;
+}
+
+/*Third section*/
+
+.third-section{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: stretch;
+	align-content: stretch;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    
+}
+
+.img-s3 img{
+
+    align-items: right;
+    height: 350px;
+    width: 320px;
+    margin-top: 90px;
+}
+
+.content-s3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #eeb699;
+    width: 700px;
+    height: 600px;
+}
+
+.content-s3 h3{
+    display: flex;
+    margin-top: 50px;
+    color: #343536;
+    font-weight: 100;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.content-s3 p{
+    display: flex;
+    text-align: center;
+    margin-left: 65px;
+    margin-right: 65px;
+    line-height: 1.5;
+    color: #5c5c5c;
+    font-size: 20px;
+}
+
+#p1-s3{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+.hr1-s3 {
+    display: flex;
+    margin-top: 105px;
+    background-color: #5c5c5c;
+    height: 310px;
+    margin-right: 20px;
+    width: 0.3px;
+
+}
+
+
