@@ -304,5 +304,13 @@ body{
     margin-right: 20px;
     width: 0.3;
 }
+.header1{
+    margin-left: 50px;
+    color: rgb(228, 211, 203);
+    
+    font-size: 150px;
+   
+    font-weight: 100;
+}
 
 
