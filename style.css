@@ -323,7 +323,7 @@ body{
 #p--1{
     padding-top: 10px;
     text-align: left;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Crimson Text', serif;
     font-size: medium;
     margin-left: 30px;
     color: grey;
@@ -333,7 +333,7 @@ body{
     
     padding-top: 10px;
     text-align:left;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Crimson Text', serif;
     font-size: medium;
     margin-left: 30px;
     color: grey;
@@ -350,6 +350,7 @@ hr{
     
 }
 .foto2{
+    
     display:  flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -359,10 +360,11 @@ hr{
    
 }
 .check{
+   
     font-size: x-large;
     margin-top: 5%;
     color: black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Crimson Text', serif ;
     font-weight: 100;
     display: flex;
     flex-wrap: wrap;
@@ -378,7 +380,7 @@ ol{
     justify-content: center;
     margin-top: 6%;
 }
-button {
+/*button {
     
     background-color: rgb(199, 99, 42);
     border: none;
@@ -390,7 +392,7 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10%;
-}
+}*/
 .rooms{
     margin-top: 7%;
     display: flex;
@@ -412,6 +414,26 @@ button {
     white-space: nowrap;
     animation: revealText 4s steps(20) 1; /* Adjust the duration and steps as needed */
   }
+#DESCRIPTION{
+    font-family: 'Crimson Text', serif;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-weight: 80;
+    font-size: xx-large;
+}
+#ResortFood{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.caption{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family:'Crimson Text', serif  ;
+}
 
 
 
