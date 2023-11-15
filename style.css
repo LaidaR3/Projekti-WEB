@@ -476,7 +476,32 @@ ol{
     justify-content: right;
     font-size: small;
 }
-
+/*ROOMS*/
+.dhoma1 {
+    display: flex;
+    padding: 0px;
+  }
+  
+  #dhomafoto {
+    flex: 1;
+  }
+  
+  #dhomafoto img {
+    width: 70%;
+    height: auto;
+  }
+  
+  #pershkrimi {
+    flex: 1;
+    border: 2px solid grey;
+    justify-content: center;
+    margin-left: 80px;
+    max-width: 600px;
+    max-height: 500px; /* Limits the width of pershkrimi */
+  }
+  
+  
+  
 
 
 
