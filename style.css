@@ -428,12 +428,28 @@ ol{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.caption{
+.ratings{
+    margin-top: 80px;
+    font-size: x-large;
     display: flex;
-    justify-content: center;
-    color: black;
-    font-family:'Crimson Text', serif  ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family:'Crimson Text', serif ;
+    font-weight: 100;
 }
+#yllat{
+    color: #eeb699;
+    margin-bottom: 20px;
+    
+}
+#unknown{
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    color: #eeb699;
+}
+
 
 
 
