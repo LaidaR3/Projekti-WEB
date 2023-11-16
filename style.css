@@ -616,12 +616,15 @@ ol{
     display: flex;
     align-items: center;
     width: 100%;
+    
+    
 }
 
 #dhomafoto5 {
     margin-top: 80px;
     width: 50%;
     height: auto;
+    
     
 }
 
