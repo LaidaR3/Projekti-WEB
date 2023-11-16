@@ -303,6 +303,7 @@ body{
 .fourth-section{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 90px;
     margin-bottom: 50px;
@@ -362,9 +363,10 @@ body{
 .fifth-section{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 90px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     align-items: center;
 }
 
@@ -414,6 +416,89 @@ body{
     background-color: white;
     transition: 0.3s;
 }
+
+.sixth-section{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+
+}
+
+.img1-s6 img{
+    width: 300px;
+    height: 400px;
+    margin-top: 40px;
+}
+
+.middle-part{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+	justify-content: space-between;
+	align-content: space-evenly;
+    background-color: #eeb699;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.middle-part p{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    margin-left: 35px;
+    margin-right: 35px;
+    line-height: 1.5;
+    color: #5c5c5c;
+    font-size: 20px;
+    
+}
+
+ .middle-part h3{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    line-height: 1;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 45px;
+    color: #343536;
+}
+
+.middle-part h4{
+    text-align: center;
+    font-size: 20px;
+    color: #343536;
+    font-weight: 1;
+}
+
+
+.middle-part ol li{
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 35px;
+
+    color:#343536;
+    font-style: italic;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.img2-s6 img{
+    width: 300px;
+    height: 400px;
+    margin-top: 190px;
+}
+
+
+
+
 
 /*ABOUT US*/
 #header1{
