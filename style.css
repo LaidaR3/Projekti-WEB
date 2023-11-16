@@ -479,26 +479,37 @@ ol{
 /*ROOMS*/
 .dhoma1 {
     display: flex;
-    padding: 0px;
-  }
-  
-  #dhomafoto {
-    flex: 1;
-  }
-  
-  #dhomafoto img {
-    width: 70%;
+    align-items: center;
+    width: 100%;
+}
+
+#dhomafoto {
+    width: 50%;
     height: auto;
-  }
-  
-  #pershkrimi {
-    flex: 1;
-    border: 2px solid grey;
-    justify-content: center;
-    margin-left: 80px;
-    max-width: 600px;
-    max-height: 500px; /* Limits the width of pershkrimi */
-  }
+    
+}
+
+#dhomafoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pershkrimi {
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
+    line-height: 3;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#doubleRoom{
+    color: #ef8346;
+}
+    
+
+
   
   
   
