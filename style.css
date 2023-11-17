@@ -719,6 +719,15 @@ ol{
     margin-top: 20px;
 }
 
+#tabela1{
+    border-collapse: collapse;
+    margin-left: 50px;
+}
+#tabela1 td{
+    border: 1px solid black;
+    padding: 8px;
+}
+
 
   
 
