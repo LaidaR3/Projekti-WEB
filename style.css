@@ -700,6 +700,25 @@ ol{
 #doubleRoom5{
     color: #ef8346;
 }
+/*ROOM 1*/
+.room1-fotot{
+    display: flex;
+    justify-content: space-between;
+}
+#double1{
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 50px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
+}
+#capacity1{
+    font-size: large;
+    color: #5c5c5c;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
 
   
 
