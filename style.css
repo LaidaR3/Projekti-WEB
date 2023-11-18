@@ -711,9 +711,9 @@ ol{
 }
 #doubleRoom{
     color: #363231;
+    font-weight: 100;
+    font-size: 50px;
     
-    font-size: xx-large;
-    font-style: oblique;
 }
 
 #pershkrimi2 a {
@@ -758,9 +758,9 @@ ol{
 
 #doubleRoom2 {
     color: #363231;
+    font-size: 50px;
+    font-weight: 100;
     
-    font-size: xx-large;
-    font-style: oblique;
 }
 #pershkrimi3 a {
     color: black; 
@@ -803,8 +803,9 @@ ol{
 #doubleRoom3{
     color: #363231;
     
-    font-size: xx-large;
-    font-style: oblique;
+    font-size: 50px;
+    font-weight: 100;
+    
 }
 #pershkrimi4 a {
     color: black; 
@@ -848,8 +849,9 @@ ol{
 #doubleRoom4 {
     color: #363231;
     
-    font-size: xx-large;
-    font-style: oblique;
+    font-size: 50px;
+    font-weight: 100;
+  
 }
 #pershkrimi5 a {
     color: black; 
@@ -895,9 +897,9 @@ ol{
 }
 #doubleRoom5{
     color: #363231;
+    font-size: 50px;
+    font-weight: 100;
     
-    font-size: xx-large;
-    font-style: oblique;
 }
 /*ROOM 1*/
 .room1-fotot{
