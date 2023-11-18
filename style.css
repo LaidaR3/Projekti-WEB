@@ -672,6 +672,15 @@ ol{
     font-size: small;
 }
 /*ROOMS*/
+#pershkrimi a {
+    color: black; 
+    text-decoration: none; 
+}
+
+
+#pershkrimi a:visited {
+    color: brown; 
+}
 .dhoma1 {
     display: flex;
     align-items: center;
@@ -707,7 +716,15 @@ ol{
     font-style: oblique;
 }
 
+#pershkrimi2 a {
+    color: black; 
+    text-decoration: none; 
+}
 
+
+#pershkrimi2 a:visited {
+    color: brown; 
+}
 
 .dhoma2 {
     display: flex;
@@ -745,7 +762,15 @@ ol{
     font-size: xx-large;
     font-style: oblique;
 }
+#pershkrimi3 a {
+    color: black; 
+    text-decoration: none; 
+}
 
+
+#pershkrimi3 a:visited {
+    color: brown; 
+}
 .dhoma3 {
     margin-top: 100px;
     display: flex;
@@ -781,7 +806,15 @@ ol{
     font-size: xx-large;
     font-style: oblique;
 }
+#pershkrimi4 a {
+    color: black; 
+    text-decoration: none; 
+}
 
+
+#pershkrimi4 a:visited {
+    color: brown; 
+}
 .dhoma4 {
     display: flex;
     align-items: center;
@@ -818,7 +851,15 @@ ol{
     font-size: xx-large;
     font-style: oblique;
 }
+#pershkrimi5 a {
+    color: black; 
+    text-decoration: none; 
+}
 
+
+#pershkrimi5 a:visited {
+    color: brown; 
+}
 .dhoma5 {
     display: flex;
     align-items: center;
@@ -931,6 +972,42 @@ button {
     margin-bottom: 40px;
     color: #363231;
 }
+/*ROOM2*/
+
+.room2-fotot{
+    display: flex;
+    justify-content: space-between;
+}
+#deluxe2{
+    color: #363231;
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 50px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
+}
+#capacity2{
+    font-size: large;
+    color: #363231;
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+}
+
+#teksti-room2{
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+    color: #363231;
+    font-size: large;
+
+}
+
+
+
+
+
+
 
 
   
