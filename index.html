@@ -64,7 +64,7 @@
 
         <div class="second-section">
             <div class="heading2">
-                <p class="h1-s2">Amneties</p>
+                <p>Amneties</p>
             </div>
             <div class="paragraphs2">
                 <div class="p1-2">
@@ -250,6 +250,43 @@
             </div>
 
         </div>
+
+        <div class="eighth-section">
+            <div class="heading-s8">
+                <p>We wish you a very warm welcome at Monvelli Resort</p>
+            </div>
+            <p><div class="datetime-s8" id="datetime-s8"></div></p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+
+
+            function updateTime() {
+                const now = new Date();
+                const dateTime = now.toLocaleString();
+                document.getElementById('datetime-s8').textContent = dateTime;
+            }
+
+
+            setInterval(updateTime, 1000);
+
+
+            updateTime();
+
+        </script>
     </main>
 
         
