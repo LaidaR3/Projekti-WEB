@@ -701,7 +701,10 @@ ol{
     box-sizing: border-box;
 }
 #doubleRoom{
-    color: #ef8346;
+    color: #363231;
+    
+    font-size: xx-large;
+    font-style: oblique;
 }
 
 
@@ -737,7 +740,10 @@ ol{
 }
 
 #doubleRoom2 {
-    color: #ef8346;
+    color: #363231;
+    
+    font-size: xx-large;
+    font-style: oblique;
 }
 
 .dhoma3 {
@@ -770,7 +776,10 @@ ol{
     box-sizing: border-box;
 }
 #doubleRoom3{
-    color: #ef8346;
+    color: #363231;
+    
+    font-size: xx-large;
+    font-style: oblique;
 }
 
 .dhoma4 {
@@ -804,7 +813,10 @@ ol{
 }
 
 #doubleRoom4 {
-    color: #ef8346;
+    color: #363231;
+    
+    font-size: xx-large;
+    font-style: oblique;
 }
 
 .dhoma5 {
@@ -841,7 +853,10 @@ ol{
     box-sizing: border-box;
 }
 #doubleRoom5{
-    color: #ef8346;
+    color: #363231;
+    
+    font-size: xx-large;
+    font-style: oblique;
 }
 /*ROOM 1*/
 .room1-fotot{
@@ -849,6 +864,7 @@ ol{
     justify-content: space-between;
 }
 #double1{
+    color: #363231;
     margin-top: 50px;
     font-size: 60px;
     margin-left: 50px;
@@ -857,11 +873,12 @@ ol{
 }
 #capacity1{
     font-size: large;
-    color: #5c5c5c;
+    color: #363231;
     margin-left: 50px;
     margin-top: 20px;
+    line-height: 2;
 }
-
+/*
 #tabela1{
     border-collapse: collapse;
     margin-left: 50px;
@@ -869,6 +886,50 @@ ol{
 #tabela1 td{
     border: 1px solid black;
     padding: 8px;
+}*/
+#teksti-room1{
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+    color: #363231;
+    font-size: large;
+
+}
+.bookResort{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+button {
+    
+    background-color: rgb(199, 99, 42);
+    border: none;
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: radius 0;
+}
+.amenities-room1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    line-height: 5;
+    font-size: larger;
+    color: #363231;
+}
+#amenities-header{
+    font-size: xx-large;
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #363231;
 }
 
 
