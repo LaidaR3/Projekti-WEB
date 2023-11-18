@@ -193,15 +193,19 @@ body{
     margin-top: 40px;
     margin-bottom: 40px;
 }
-#h1-2{ 
+.heading2 { 
     display: flex;
     justify-content: left;
-    color:#eeb699;
+    
+    
+}
+
+.heading2 p{
+    color:#ef8346;
     font-style: italic;
     font-size: 100px;
     margin-left: 60px;
-    font-weight: 1;
-    
+    font-weight: 800px;
 }
 .paragraphs2{
     display: flex;
@@ -417,6 +421,8 @@ body{
     transition: 0.3s;
 }
 
+/*sixth section*/
+
 .sixth-section{
     display: flex;
 	flex-direction: row;
@@ -497,6 +503,50 @@ body{
 }
 
 
+/*seventh section*/
+
+.ratin-h3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #f5f5f5 ;
+}
+
+.ratin-h3 p{
+    font-weight: 300px;
+    font-size: 40px;
+    font-style: italic;
+    color: #363231;
+    margin-top: 50px;
+}
+
+.ratings-s7{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+#yllat-s7{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: #eeb699;
+    margin-bottom: 20px;
+    
+}
+#unknown-s7{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: #eeb699;
+    margin-bottom: 50px;
+}
 
 
 
