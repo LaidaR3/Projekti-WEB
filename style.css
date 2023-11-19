@@ -760,7 +760,7 @@ ol{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.ratings{
+/* .ratings{
     margin-top: 80px;
     font-size: x-large;
     display: flex;
@@ -783,9 +783,9 @@ ol{
     display: flex;
     justify-content: center;
     color: #eeb699;
-}
+} */
 
-.footer{
+/* .footer{
     margin-top: 40px;
     margin-bottom: 40px;
     font-family:'Crimson Text', serif ;
@@ -807,7 +807,7 @@ ol{
     display: flex;
     justify-content: right;
     font-size: small;
-}
+} */
 /*ROOMS-ndryshime ne main foto*/
 .header-Rooms{
     display: flex;
