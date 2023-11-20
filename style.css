@@ -871,12 +871,14 @@ ol{
 }
 
 #pershkrimi {
+    margin-top: 90px;
     text-align: center;
     font-family: 'Crimson Text', serif;
     font-weight: 100;
     line-height: 3;
-    width: 50%;
+    width: 40%;
     padding: 20px;
+    margin-left: 90px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
@@ -922,6 +924,8 @@ ol{
     line-height: 3;
     width: 50%;
     padding: 20px;
+    margin-right: 60px;
+    margin-left: 30px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     order: -1 !important; /* Changing the order to display before the image */
@@ -967,7 +971,9 @@ ol{
     font-weight: 100;
     line-height: 3;
     width: 50%;
-    padding: 20px;
+    padding: 10px;
+    margin-left: 70px;
+    margin-right: 30px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
@@ -1012,6 +1018,8 @@ ol{
     line-height: 3;
     width: 50%;
     padding: 20px;
+    margin-right: 60px;
+    margin-left: 30px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     order: -1 !important; /* Changing the order to display before the image */
@@ -1062,7 +1070,9 @@ ol{
     font-weight: 100;
     line-height: 3;
     width: 50%;
-    padding: 20px;
+    padding: 40px;
+    margin-left: 70px;
+    margin-right: 30px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
@@ -1205,7 +1215,36 @@ button {
     font-size: large;
 
 }
+/*Room 4*/
 
+.room4-fotot{
+    display: flex;
+    justify-content: space-between;
+}
+#twin4{
+    color: #363231;
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 50px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
+}
+#capacity4{
+    font-size: large;
+    color: #363231;
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+}
+
+#teksti-room4{
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+    color: #363231;
+    font-size: large;
+
+}
 
 
 
