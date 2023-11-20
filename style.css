@@ -808,7 +808,7 @@ ol{
     justify-content: right;
     font-size: small;
 }
-/*ROOMS*/
+/*ROOMS-ndryshime ne main foto*/
 .header-Rooms{
     display: flex;
     align-items: flex-start; 
@@ -830,6 +830,9 @@ ol{
     left: 20px; 
     
 }
+
+
+
 
 
 .header-Rooms{
@@ -1172,8 +1175,36 @@ button {
     font-size: large;
 
 }
+/*ROOM 3*/
 
+.room3-fotot{
+    display: flex;
+    justify-content: space-between;
+}
+#junior3{
+    color: #363231;
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 50px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
+}
+#capacity3{
+    font-size: large;
+    color: #363231;
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+}
 
+#teksti-room3{
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+    color: #363231;
+    font-size: large;
+
+}
 
 
 
