@@ -1245,8 +1245,35 @@ button {
     font-size: large;
 
 }
+/*Room 5*/
+.room5-fotot{
+    display: flex;
+    justify-content: space-between;
+}
+#supertwin5{
+    color: #363231;
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 50px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
+}
+#capacity5{
+    font-size: large;
+    color: #363231;
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+}
 
+#teksti-room5{
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 2;
+    color: #363231;
+    font-size: large;
 
+}
 
 
 
