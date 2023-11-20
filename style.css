@@ -1304,6 +1304,7 @@ button {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 50px;
+
 }
 
 .left-part{
@@ -1311,6 +1312,7 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    width: 300px;
 }
 
 #p1-left{
@@ -1322,20 +1324,20 @@ button {
 #p2-left{
     color: #363231;
     font-size: 45px;
-    margin-bottom: 10px;
+
     font-style: italic;
 }
 
 .left-part ol{
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 10px;
+    
 }
 
 .left-part li{
     display: flex;
     flex-wrap: wrap;
     text-align: left;
-    font-size: 35px;
+    font-size: 30px;
     color: #363231;
 }
 
@@ -1352,8 +1354,78 @@ button {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 10px;
-    margin-top: 40px;
 }
+
+/* #p1-right{
+    margin-top: 60px;
+    color: #ef8346;
+    font-size: 25px;
+}
+
+#p2-right{
+    color: #363231;
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-style: italic;
+} */
+
+.form-part{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.form-part form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    
+}
+
+input[type=text]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left:none;
+    border-right: none;
+    border-top:1px #d7d1d1;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+input[id=message]{
+    height: 60px;
+    font-size: 15px;
+}
+
+label{
+    font-size: 30px;
+    color: #5c5c5c;
+}
+
+form button{
+    justify-content: center;
+}
+
+#submit-form{
+    width: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    font-size: 15px;
+    border: none;
+    background-color: #343536;
+    color:#ef8346;
+}
+
+
+#submit-form:hover{
+    background-color:#ef8346;
+    color: #343536;
+    transition: 0.3s;
+}
+
 
 
 
