@@ -1494,9 +1494,50 @@ form button{
     font-size: 20px;
 }
 
+/*second section*/
 
 
+.secondSection-ps{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	justify-content: space-evenly;
+    margin-bottom: 90px;
+    margin-top: 120px;
+}
 
+.img2-ps{
+    display: flex;
+    flex-direction: row;
+}
+
+.img2-ps img{
+    margin-top: 40px;
+    height: 300px;
+    width: 450px;
+}
+
+.img2-ps hr{
+    display: flex;
+    margin-top: 65px;
+    background-color: #5c5c5c;
+    height: 250px;
+    margin-right: 25px;
+    width: 0.3px;
+}
+
+.content2-ps ol{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.content2-ps ol li{
+    font-size: 19px;
+    color: #ef8346;
+    font-style: italic;
+}
 
 
 
