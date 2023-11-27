@@ -182,6 +182,10 @@ body{
     transition: 0.3s;
 }
 
+.first-p a{
+    text-decoration: none;
+}
+
 
 /*Second Section*/
 .second-section{
@@ -352,8 +356,10 @@ body{
     border: none;
     color:white;
     background-color:#343536;
-   
-    
+}
+
+.p1-s4 a{
+    text-decoration: none;
 }
 
 .p1-s4 button:hover{
@@ -413,6 +419,10 @@ body{
     border: none;
     color:white;
     background-color:#343536;
+}
+
+.p1-s5 a{
+    text-decoration: none;
 }
 
 .p1-s5 button:hover{
