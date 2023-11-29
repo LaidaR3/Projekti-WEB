@@ -1150,7 +1150,7 @@ button {
     cursor: pointer;
     border: radius 0;
 }
-.amenities-room1{
+/* .amenities{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1165,7 +1165,7 @@ button {
     margin-top: 40px;
     margin-bottom: 40px;
     color: #363231;
-}
+} */
 /*ROOM2*/
 
 .room2-fotot{
@@ -1583,16 +1583,43 @@ form button{
     justify-items: center;
     justify-content: space-evenly;
 }
-.check1 label{
+/* .check1 label{
     /* padding-left: 50px;
-    padding-right: 50px; */
-}
+    padding-right: 50px; 
+} */
 
 
 .check1 input{
     width: 250px;
     margin-right: 30px;
     margin-left: 30px;
+}
+.amenities{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    justify-content: space-evenly;
+    line-height: 5;
+    font-size: x-large;
+    color: #363231;
+}
+.amenities ol li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust the margin-bottom as needed */
+}
+
+.amenities ol li img {
+    margin-right: 10px; /* Adjust the margin between the image and text */
+    height: 30px;
+}
+#amenities-header{
+    font-size: xx-large;
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #363231;
 }
 
 
