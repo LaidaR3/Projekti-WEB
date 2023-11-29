@@ -1623,6 +1623,20 @@ form button{
 }
 
 
+.slideshow-container {
+    overflow: hidden;
+}
+
+.room3-fotot {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.room3-fotot img {
+    margin-right: 50px; /* Adjust the margin as needed */
+}
+
+
 
 
 

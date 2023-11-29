@@ -21,13 +21,16 @@
         </ul>
         
     </header>
-
+<div class="slideshow-container">
     <div class="room3-fotot">
         <img src="./imgs/room3-bathroom.jpg" alt="" style="height: 450px;">
         <img src="./imgs/junior-lloji2.jpg" alt="" style="height: 450px;">
         <img src="./imgs/room3-bathroom2.jpg" alt="" style="height: 450px;">
+        <img src="./imgs/room3-bathroom.jpg" alt="" style="height: 450px;">
+        <img src="./imgs/junior-lloji2.jpg" alt="" style="height: 450px;">
+        <img src="./imgs/room3-bathroom2.jpg" alt="" style="height: 450px;">
         
-    </div> 
+    </div> </div>
     <div>
         <h1 id="junior3" >Junior Room</h1>
         <p id="capacity3">Capacity: 2-3 persons<br>
@@ -44,6 +47,7 @@
     </div> 
     <p id="amenities-header">Amenities</p>
 <div class="amenities">
+    
     <div class="amenities1-room1">
        <ol>
            <li><img src="imgs/pool.jpg"height="30px" alt="">Pool</li>
@@ -95,6 +99,32 @@
         
         <p> &copy; Monvelli</p>
     </div>
+    <script>
+const container = document.querySelector('.room3-fotot');
+const images = document.querySelectorAll('.room3-fotot img');
+let currentOffset = 0;
+const imageWidth = images[0].clientWidth; // Assuming all images have the same width
+
+function moveRight() {
+    currentOffset -= imageWidth;
+    container.style.transform = `translateX(${currentOffset}px)`;
+
+    if (currentOffset <= -imageWidth * (images.length - 3)) { // Adjust the number to the number of images displayed at a time (-3 for the original three images)
+        currentOffset = 0;
+        container.style.transition = 'none';
+        container.style.transform = `translateX(${currentOffset}px)`;
+        setTimeout(() => {
+            container.style.transition = 'transform 1s ease-in-out';
+        });
+    }
+}
+
+setInterval(moveRight, 2000); // Change image every 2 seconds
+
+
+
+
+    </script>
     
 </footer>
 </body>
