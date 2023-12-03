@@ -66,7 +66,7 @@
                         <input type="text" id="email" name="email">
                         <label for="femail">Your message</label>
                         <input type="text" id="message" name="message">
-                        <button type="submit" id="submit-form">Submit</button>
+                        <button type="submit" id="submit-form" onclick="validateForm()">Submit</button>
                     </form>
         
             </div>
@@ -104,6 +104,33 @@
         </div>
         
     </footer>
+
+
+
+    <script>
+        function validateForm(){
+            var name = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+            var email = document.getElementById('email').value;
+            var nameRegex = /^[a-zA-Z/s]+$/;
+            if(!nameRegex.test(name)){
+                alert('Please enter your name!');
+                return false;
+            }
+
+            var lnameRegex = /^[a-zA-Z/s]+$/;
+            if(!lnameRegex.test(lname)){
+                alert('Please enter your name!');
+                return false;
+            }
+
+            var emailRegex = /^[^/s@]+@[^\s@]+\.[^\s@?]+$/;
+            if(!emailRegex.test(email)){
+                alert('Please enter your E-mail');
+                return false;
+            }
+        }
+    </script>
 
     
 </body>
