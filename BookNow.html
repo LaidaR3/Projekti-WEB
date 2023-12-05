@@ -26,8 +26,6 @@ rel="stylesheet">
         </ul>
 
     </header>
-
-
     <main>
 
         <div class="hr-b">
@@ -35,16 +33,18 @@ rel="stylesheet">
         </div>
          <div class="check-in-form">
             <form action="">
-            <div class="check1">
+            <div class="checkIN">
                     <label for="checkin">Check-in</label>
-                    <label for="checkout">Check-out</label>
+                   <input type="date" id="checkin" name="checkin"> 
+            </div>
+            <div class="guests">
                     <label for="guests">Guests</label>
-                    
+                    <input type="number" id="guests" name="guests">
             </div>              
-            <div class="check1">
-                <input type="date" id="checkin" name="checkin">        
-                <input type="date" id="checkout" name="checkout">
-                <input type="number" id="guests" name="guests">
+            <div class="checkOUT">
+                   <label for="checkout">Check-out</label>     
+                <input type="date" id="checkout" name="checkout" >
+                
             </div>
                     
             </form>
