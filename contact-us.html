@@ -116,14 +116,13 @@
 
 
 
-    <script>
+        <script>
 
             function validateForm() {
 
                 let fnameInput = document.getElementById('fname');
                 let lnameInput = document.getElementById('lname');
                 let emailInput = document.getElementById('email');
-                let messageInput = document.getElementById('message');
 
                 let nameError = document.getElementById('nameError');
                 let lnameError = document.getElementById('lnameError');
@@ -152,77 +151,12 @@
                     return;
                 }
 
-                
+
                 alert('Form submitted successfully!');
-        }
+            }
+        
 
  
-//         let fnameRegex = /^[A-Z][a-z]{1,7}$/;
-//         let lnameRegex = /^[A-Z][a-z]{1,20}$/;
-//         let emailRegex = /[a-z0-9.-_]+@+[a-z]+\.+{2,3}/;
-
-                // function validateForm(){   
-//             let nameInput = document.getElementById('fname');
-//             let nameError = document.getElementById('nameError');
-//             let lnameInput = document.getElementById('lname');
-//             let lnameError = document.getElementById('lnameError');
-//             let emailInput = document.getElementById('email');
-//             let emailError = document.getElementById('emailError');
-
-//             nameError.innerText = '';
-//             lnameError.innerText = '';
-//             emailError.innerText = '';
-
-//             if(!fnameRegex.test(nameInput.value)){
-//                 nameError.innerText = 'Emri duhet të fillojë me shkronjë të madhe dhe të jetë gjatësisë 1-8 karaktere.';
-//                 return;
-//             }
-
-//             if(!lnameRegex.test(lnameInput.value)){
-//                 lnameError.innerText = 'Mbiemri duhet të fillojë me shkronjë të madhe dhe të jetë gjatësisë 1-20 karaktere.';
-//                 return;
-//             }
-
-//             if(!emailRegex.test(emailInput.value)){
-//                 emailError.innerText = 'Email-i është i pavlefshëm.';
-//                 return;
-//             }
-
-
-//             alert('form submitted succesfully!');
-//         }
-
-
-
-
-
-
-
-
-
-
-        // function validateForm(){
-            // var name = document.getElementById('fname').value;
-        //     var lname = document.getElementById('lname').value;
-        //     var email = document.getElementById('email').value;
-        //     var nameRegex = /^[a-zA-Z/s]+$/;
-        //     if(!nameRegex.test(name)){
-        //         alert('Please enter your name!');
-        //         return false;
-        //     }
-
-        //     var lnameRegex = /^[a-zA-Z/s]+$/;
-        //     if(!lnameRegex.test(lname)){
-        //         alert('Please enter your name!');
-        //         return false;
-        //     }
-
-        //     var emailRegex = /^[^/s@]+@[^\s@]+\.[^\s@?]+$/;
-        //     if(!emailRegex.test(email)){
-        //         alert('Please enter your E-mail');
-        //         return false;
-        //     }
-        // }
     </script>
 
     
