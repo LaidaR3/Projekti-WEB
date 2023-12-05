@@ -1551,6 +1551,55 @@ form button{
 
 /*Book Now Page*/
 
+.headerContainer-book{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    background-size: 100%;
+    margin-bottom: 20px;
+}
+
+.logo-book{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    /* margin-left: 35px; */
+}
+
+.logo-book img{
+    width: 590px;
+    height: 70px;
+}
+
+.list-book{
+
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.list-book ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    font-size: 20px;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.list-book ul li a{
+    text-decoration: none;
+    color:#ef8346;
+    margin-right: 35px;
+
+}
+
+
+.listbook ul li a:hover{
+    color:#363231;
+    transition: 0.5s;
+}
+
 .hr-b{
     display: flex;
     flex-direction: column;
