@@ -1403,6 +1403,7 @@ input[type=text]{
     border-top:1px #d7d1d1;
     font-size: 20px;
     font-weight: 100;
+    outline: none;
 }
 
 input[id=message]{
@@ -1410,9 +1411,16 @@ input[id=message]{
     font-size: 15px;
 }
 
+.error-message {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
 label{
     font-size: 30px;
     color: #5c5c5c;
+    margin-top: 20px;
 }
 
 form button{

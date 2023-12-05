@@ -60,13 +60,22 @@
                     <form name="myForm" >
                         <label for="fname">First Name</label>
                         <input type="text" id="fname" name="fname">
+                        <div class="error-message" id="nameError"></div>
+
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lname">
+                        <div class="error-message" id="lnameError"></div>
+
+                        
                         <label for="femail">E-mail</label>
                         <input type="text" id="email" name="email">
+                        <div class="error-message" id="emailError"></div>
+
+                        
                         <label for="femail">Your message</label>
                         <input type="text" id="message" name="message">
-                        <button type="submit" id="submit-form" onclick="validateForm()">Submit</button>
+
+                        <button type="button" id="submit-form" onclick="validateForm()">Submit</button>
                     </form>
         
             </div>
@@ -108,28 +117,112 @@
 
 
     <script>
-        function validateForm(){
-            var name = document.getElementById('fname').value;
-            var lname = document.getElementById('lname').value;
-            var email = document.getElementById('email').value;
-            var nameRegex = /^[a-zA-Z/s]+$/;
-            if(!nameRegex.test(name)){
-                alert('Please enter your name!');
-                return false;
-            }
 
-            var lnameRegex = /^[a-zA-Z/s]+$/;
-            if(!lnameRegex.test(lname)){
-                alert('Please enter your name!');
-                return false;
-            }
+            function validateForm() {
 
-            var emailRegex = /^[^/s@]+@[^\s@]+\.[^\s@?]+$/;
-            if(!emailRegex.test(email)){
-                alert('Please enter your E-mail');
-                return false;
-            }
+                let fnameInput = document.getElementById('fname');
+                let lnameInput = document.getElementById('lname');
+                let emailInput = document.getElementById('email');
+                let messageInput = document.getElementById('message');
+
+                let nameError = document.getElementById('nameError');
+                let lnameError = document.getElementById('lnameError');
+                let emailError = document.getElementById('emailError');
+
+                nameError.innerText = '';
+                lnameError.innerText = '';
+                emailError.innerText = '';
+
+                let fnameRegex = /^[A-Z][a-z]{1,7}$/;
+                let lnameRegex = /^[A-Z][a-z]{1,20}$/;
+                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!fnameRegex.test(fnameInput.value)) {
+                    nameError.innerText = 'First name should start with a capital letter and be 1-8 characters long.';
+                    return;
+                }
+
+                if (!lnameRegex.test(lnameInput.value)) {
+                    lnameError.innerText = 'Last name should start with a capital letter and be 1-20 characters long.';
+                    return;
+                }
+
+                if (!emailRegex.test(emailInput.value)) {
+                    emailError.innerText = 'Invalid email address.';
+                    return;
+                }
+
+                
+                alert('Form submitted successfully!');
         }
+
+ 
+//         let fnameRegex = /^[A-Z][a-z]{1,7}$/;
+//         let lnameRegex = /^[A-Z][a-z]{1,20}$/;
+//         let emailRegex = /[a-z0-9.-_]+@+[a-z]+\.+{2,3}/;
+
+                // function validateForm(){   
+//             let nameInput = document.getElementById('fname');
+//             let nameError = document.getElementById('nameError');
+//             let lnameInput = document.getElementById('lname');
+//             let lnameError = document.getElementById('lnameError');
+//             let emailInput = document.getElementById('email');
+//             let emailError = document.getElementById('emailError');
+
+//             nameError.innerText = '';
+//             lnameError.innerText = '';
+//             emailError.innerText = '';
+
+//             if(!fnameRegex.test(nameInput.value)){
+//                 nameError.innerText = 'Emri duhet të fillojë me shkronjë të madhe dhe të jetë gjatësisë 1-8 karaktere.';
+//                 return;
+//             }
+
+//             if(!lnameRegex.test(lnameInput.value)){
+//                 lnameError.innerText = 'Mbiemri duhet të fillojë me shkronjë të madhe dhe të jetë gjatësisë 1-20 karaktere.';
+//                 return;
+//             }
+
+//             if(!emailRegex.test(emailInput.value)){
+//                 emailError.innerText = 'Email-i është i pavlefshëm.';
+//                 return;
+//             }
+
+
+//             alert('form submitted succesfully!');
+//         }
+
+
+
+
+
+
+
+
+
+
+        // function validateForm(){
+            // var name = document.getElementById('fname').value;
+        //     var lname = document.getElementById('lname').value;
+        //     var email = document.getElementById('email').value;
+        //     var nameRegex = /^[a-zA-Z/s]+$/;
+        //     if(!nameRegex.test(name)){
+        //         alert('Please enter your name!');
+        //         return false;
+        //     }
+
+        //     var lnameRegex = /^[a-zA-Z/s]+$/;
+        //     if(!lnameRegex.test(lname)){
+        //         alert('Please enter your name!');
+        //         return false;
+        //     }
+
+        //     var emailRegex = /^[^/s@]+@[^\s@]+\.[^\s@?]+$/;
+        //     if(!emailRegex.test(email)){
+        //         alert('Please enter your E-mail');
+        //         return false;
+        //     }
+        // }
     </script>
 
     
