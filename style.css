@@ -1602,6 +1602,42 @@ form button{
     border-color: dodgerblue;
 }
 
+.avalaible{
+    margin-top: 200px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+.cmimi{
+    padding-left: 350px;
+}
+.searchDates{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 350px;
+}
+ button {
+    
+    background-color: rgb(199, 99, 42);
+    border: none;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: radius 0;
+}
+
 
 /*AMENTIES NDRYSHIME*/
 .amenities{
