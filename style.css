@@ -1605,6 +1605,7 @@ form button{
 .avalaible{
     margin-top: 200px;
     margin-left: 0;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -1636,6 +1637,12 @@ form button{
     margin: 4px 2px;
     cursor: pointer;
     border: radius 0;
+}
+.dhoma1Avalaible{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 
