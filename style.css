@@ -921,6 +921,7 @@ ol{
 #dhomafoto2 {
     width: 50%;
     height: auto;
+   margin-right: 2%;
 }
 
 #dhomafoto2 img {
@@ -968,6 +969,7 @@ ol{
 #dhomafoto3 {
     width: 50%;
     height: auto;
+    margin-left: 2%;
     
 }
 
@@ -1015,12 +1017,14 @@ ol{
 #dhomafoto4 {
     width: 50%;
     height: auto;
+    margin-right: 2%;
 }
 
 #dhomafoto4 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+   
 }
 
 #pershkrimi4 {
@@ -1065,6 +1069,7 @@ ol{
     margin-top: 80px;
     width: 50%;
     height: auto;
+    margin-left: 2%;
     
     
 }
