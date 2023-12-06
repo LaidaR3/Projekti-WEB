@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="containerLogIn">
+    <img src="./imgs/loginMonvelli.jpeg" width="600px" >
+
+
+    <div class="loginforma">
+        <form id="formLogIn" >
+            <img src="./imgs/logo1.png" height="40px"><br>
+            <p>Welcome Back</p>
+            <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email">
+                        <div class="errorMessage" id="emailError"></div>
+
+            <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <div class="errorMessage" id="passwordError"></div>
+
+
+                        <button type="button" id="submit-formLogIn" onclick="validateForm2()">Log In</button>
+
+    </div>
+</div>
+
+    <script>
+        function validateForm2() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}\-{|[\]\\:";'<>?,./]).{8,}$/;
+    let emailInput = document.getElementById('email');
+    let passwordInput = document.getElementById('password');
+
+    let emailError = document.getElementById('emailError');
+    let passwordError = document.getElementById('passwordError');
+
+    passwordError.innerText = '';
+    emailError.innerText = '';
+
+    if (!emailRegex.test(emailInput.value)) {
+        emailError.innerText = 'Forma e emailit tuaj eshte invalide';
+        return;
+    }
+    if (!passwordRegex.test(passwordInput.value)) {
+        passwordError.innerText = 'Invalid password';
+        return;
+    }
+
+    alert('You have logged in successfully');
+}
+
+
+    </script>
+</body>
+</html>

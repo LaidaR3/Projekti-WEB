@@ -870,6 +870,7 @@ ol{
 
 #dhomafoto {
     margin-top: 110px;
+    margin-left: 20px;
     width: 50%;
     height: auto;
     
@@ -1747,3 +1748,42 @@ form button{
     margin-right: 50px; /* Adjust the margin as needed */
 }
 /*SLIDESHOW*/
+
+/*log in*/
+
+.containerLogIn {
+    display: flex;
+    align-items: center;
+  
+    
+
+}
+.loginforma{
+    margin: 80px;
+    
+    width: 60%;
+    height: 70%;
+    padding: 120px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    line-height: 3;
+}
+.formLogIn{
+    font-family: 'Crimson Text', serif;
+    font-weight: 200;
+
+}
+input[type=password]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left:none;
+    border-right: none;
+    border-top:1px #d7d1d1;
+    font-size: 20px;
+    font-weight: 100;
+    outline: none;
+}
+
+
+
+
