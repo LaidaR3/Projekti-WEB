@@ -1768,15 +1768,13 @@ form button{
 .containerLogIn {
     display: flex;
     align-items: center;
-    justify-content: center;
   
     
 
 }
 .loginforma{
     margin: 80px;
-    display: flex;
-    justify-content: center;
+    
     width: 60%;
     height: 70%;
     padding: 120px;
