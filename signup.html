@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <div class="signUp-section">
+            <div class="img-signUp">
+                <p id="p-Si">Sign Up</p>
+                <p id="p2-si">Already have an account</p>
+                <a href="login.html" id="login-a">Log In</a>
+                
+            </div>
+            <div class="signUp-form">
+                <img src="./imgs/logo1.png" height="40px"><br>
+                <form action="myForm1">
+                    <!-- First Name -->
+                    <label for="firstname">Full Name</label>
+                    <input type="text" id="firstname-sU">
+                    <div class="error-message" id="fnameError"></div>
+                    
+                    <!-- Phone Number -->
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber">
+                    <div class="error-message" id="phoneError"></div>
+
+                    <!-- Email -->
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email">
+                    <div class="error-message" id="emailError"></div>
+
+                    <!-- Password -->
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                    <div class="error-message" id="password"></div>
+
+                    <!-- Password Confirmation-->
+                    <label for="passwordConfirm">Confirm Your Password</label>
+                    <input type="password" id="password">
+                    <div class="error-message" id="password"></div>
+
+                    <button type="button" id="submit-form" onclick="validateForm()">Sign Up</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+
+    
+</body>
+</html>
