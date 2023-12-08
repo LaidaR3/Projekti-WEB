@@ -1359,22 +1359,6 @@ ol{
     color: #363231;
 }
 
-#scollaspsible button{
-    content:'\02795';
-    font-size: 13px;
-    color: #343536;
-    float: right;
-
-    /* height: 40px;
-    border: none;
-    top: 50%;
-  left: 50%;
-    background-color: #3498db; /* Change the background color as needed */
-    /* color: white;
-    font-size: 24px;
-    cursor: pointer;
-    outline: none; */ 
-  }
   
 
 .left-part hr{
