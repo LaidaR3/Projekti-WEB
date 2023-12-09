@@ -91,7 +91,19 @@ body{
     width: 800px;
     justify-content: center;
     color: #343536;
+    opacity: 0; 
+    animation: fadeInAnimation 2s ease-in-out forwards; 
 }
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* Gradually increase opacity to 1 */
+  }
+}
+
 
 /*First section*/
 
@@ -1319,6 +1331,8 @@ ol{
 
 .mainIMG-c{
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(imgs/hallway.jpg);
     background-size: 100% 100% ;
     height:  600px;
@@ -1327,14 +1341,26 @@ ol{
 #title-c{
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    color: #5c5c5c;
+    justify-content: center;
+    color:white;
     font-weight: lighter;
-    font-size: 70px;
+    font-size: 60px;
     font-style: italic;
     margin-top: 90px;
-    margin-left: 90px;
+    letter-spacing: 25px;
+    opacity: 0; 
+  animation: fadeInAnimation 2s ease-in-out forwards; 
 }
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; 
+  }
+  to {
+    opacity: 1; 
+  }
+}
+
 
 .firstSection-c{
     display: flex;
