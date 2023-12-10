@@ -66,7 +66,7 @@
    
     <div class="dhoma3">
         <div id="dhomafoto3">
-            <img src="./imgs/junior.jpg" height="100%" width="100%">
+            <img id="slideshow3" height="100%" width="100%">
         </div>
         <div id="pershkrimi3">
             <h1 id="doubleRoom3">Junior Room</h1>
@@ -93,7 +93,7 @@
         
     
         <div id="dhomafoto4">
-            <img src="./imgs/junior3.jpg" height="100%" width="100%">
+            <img id="slideshow4" height="100%" width="100%">
         </div>
         
     </div>
@@ -145,6 +145,7 @@
     </footer>
 
     <script>
+        // Dhoma 1 slider
         let i = 0;
         let imgArray = ['imgs/dhoma1.jpeg','imgs/slider3.jpeg'];
 
@@ -160,7 +161,7 @@
             setTimeout("changeImg()", 2000);
         }
         document.addEventListener(onload, changeImg());
-
+        // Dhoma 2 slider
         let j = 0;
         let imgArray2 = ['imgs/dhoma22.jpeg','imgs/slider4.webp'];
 
@@ -176,6 +177,38 @@
             setTimeout("changeImg2()", 2000);
         }
         document.addEventListener(onload, changeImg2());
+        // Dhoma 3 slider
+        let h = 0;
+        let imgArray3 = ['imgs/dhoma1.jpeg','imgs/slider5.jpeg'];
+
+        function changeImg3(){
+            document.getElementById('slideshow3').src = imgArray3[h];
+
+            if(j< imgArray3.length -1){
+                h++;
+            }
+            else{
+                h=0;
+            }
+            setTimeout("changeImg3()", 2000);
+        }
+        document.addEventListener(onload, changeImg3());
+        // Dhoma 4 slider
+        let k = 0;
+        let imgArray4 = ['imgs/woden.jpeg','imgs/junior3.jpg'];
+
+        function changeImg4(){
+            document.getElementById('slideshow4').src = imgArray4[k];
+
+            if(k< imgArray4.length -1){
+                k++;
+            }
+            else{
+                k=0;
+            }
+            setTimeout("changeImg4()", 2000);
+        }
+        document.addEventListener(onload, changeImg4());
     </script>
     
 </body>
