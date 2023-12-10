@@ -24,9 +24,9 @@
     <main>
 
         <div class="header-Rooms">
+            <img src="./imgs/black2.webp" alt="" height="40%" width="22%">
             <img src="./imgs/roomsDetails1.jpeg" alt="" height="40%" width="22%">
-            <img src="./imgs/roomsDetails2.jpeg" alt="" height="40%" width="22%">
-            <img src="./imgs/roomsDetails3.webp" alt="" height="40%" width="22%">
+            <img src="./imgs/black.jpeg" alt="" height="40%" width="22%">
             <img src="./imgs/roomsDetails4.webp" alt="" height="40%" width="22%">
           
         </div> 
@@ -99,7 +99,7 @@
     </div>
     <div class="dhoma5"> 
         <div id="dhomafoto5">
-            <img src="./imgs/supertwin.jpg" height="100%" width="100%">
+            <img id="slideshow5" height="100%" width="100%">
         </div>
         <div id="pershkrimi5">
             <h1 id="doubleRoom5">Superior Twin Room</h1>
@@ -209,6 +209,23 @@
             setTimeout("changeImg4()", 2000);
         }
         document.addEventListener(onload, changeImg4());
+        // Dhoma 5 slider
+
+        let g = 0;
+        let imgArray5 = ['imgs/supertwin.jpg','imgs/slider6.jpeg'];
+
+        function changeImg5(){
+            document.getElementById('slideshow5').src = imgArray5[g];
+
+            if(g< imgArray5.length -1){
+                g++;
+            }
+            else{
+                g=0;
+            }
+            setTimeout("changeImg5()", 2000);
+        }
+        document.addEventListener(onload, changeImg5());
     </script>
     
 </body>
