@@ -97,10 +97,10 @@ body{
 
 @keyframes fadeInAnimation {
   from {
-    opacity: 0; /* Start with opacity 0 */
+    opacity: 0; 
   }
   to {
-    opacity: 1; /* Gradually increase opacity to 1 */
+    opacity: 1; 
   }
 }
 
@@ -192,7 +192,7 @@ body{
 }
 @keyframes img2 {
     from {top: 0px;}
-    to {top: 200px;}
+    to {top: 150px;}
 }
 
 
@@ -544,7 +544,6 @@ body{
     height: 400px;
     margin-top: 190px;
 }
-
 
 /*seventh section*/
 
