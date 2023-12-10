@@ -59,7 +59,7 @@
         </div>
     
         <div id="dhomafoto2">
-            <img src="./imgs/dhoma22.jpeg" height="100%" width="100%">
+            <img id="slideshow2" height="100%" width="100%">
         </div>
     </div>
     
@@ -160,6 +160,22 @@
             setTimeout("changeImg()", 2000);
         }
         document.addEventListener(onload, changeImg());
+
+        let j = 0;
+        let imgArray2 = ['imgs/dhoma22.jpeg','imgs/slider4.webp'];
+
+        function changeImg2(){
+            document.getElementById('slideshow2').src = imgArray2[j];
+
+            if(j< imgArray2.length -1){
+                j++;
+            }
+            else{
+                j=0;
+            }
+            setTimeout("changeImg2()", 2000);
+        }
+        document.addEventListener(onload, changeImg2());
     </script>
     
 </body>
