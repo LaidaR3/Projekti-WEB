@@ -1760,7 +1760,7 @@ form button{
 .avalaible{
     margin-top: 100px;
     margin-left: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1797,6 +1797,20 @@ form button{
     color:#ef8346;
     background-color: white;
     transition: 0.3s;
+}
+.avalaible2{
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
 }
  /* button {
     
