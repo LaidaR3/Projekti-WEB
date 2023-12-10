@@ -858,7 +858,22 @@ ol{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 30px;
+}
+#img-header {
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .header-Rooms img {
     opacity: 0;
@@ -873,34 +888,20 @@ ol{
         opacity: 1;
     }
 }
-/* .header-Rooms{
-    display: flex;
-    align-items: flex-start; 
-    justify-content: flex-start; 
-    background-image: url(imgs/room.main1.jpg);
-    background-size: 100% 100%;
-    height:  600px;
-    
-    padding: 20px; 
-    position: relative;
-} */
+
  
-/* #img-header{
-    font-size: 70px;
+ #img-header{
+    font-size: 40px;
     color: #343536;
     font-style: italic;
-    margin: 0; 
-    position: absolute; 
-    top: 20px; 
-    left: 20px; 
+    position: relative;
+   
+    top: 50px; 
+     margin-left: 90px;
+    font-family: 'Crimson Text', serif;
     
 }
-.header-Rooms{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}  */
+
 
 #pershkrimi a {
     color: black; 
@@ -912,6 +913,7 @@ ol{
     color: brown; 
 }
 .dhoma1 {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     width: 100%;
