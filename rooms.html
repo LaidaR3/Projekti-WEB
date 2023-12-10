@@ -33,7 +33,9 @@
           <p id="img-header"> Welcome to our exquisite hotel rooms, where luxury meets comfort in every detail!</p>
         <div class="dhoma1">
             <div id="dhomafoto">
-            <img src="./imgs/dhoma1.jpeg"height= "100%" width="40%" ></div>
+            <img id="slideshow" height= "100%" width="40%" >
+           
+        </div>
         
         <div id="pershkrimi">
             <h1 id="doubleRoom">Double Room</h1>
@@ -141,6 +143,24 @@
         </div>
         
     </footer>
+
+    <script>
+        let i = 0;
+        let imgArray = ['imgs/dhoma1.jpeg','imgs/slider3.jpeg'];
+
+        function changeImg(){
+            document.getElementById('slideshow').src = imgArray[i];
+
+            if(i< imgArray.length -1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("changeImg()", 2000);
+        }
+        document.addEventListener(onload, changeImg());
+    </script>
     
 </body>
 </html>
