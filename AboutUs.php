@@ -18,11 +18,11 @@ rel="stylesheet">
         </div>
         <ul>
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="rooms.html">Rooms</a></li>
-            <li><a href="poolAndSpa.html">Pool & Spa</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-            <li><a href="BookNow.html" target="_blank">Book Now</a></li>
+            <li><a href="AboutUs.php">About Us</a></li>
+            <li><a href="rooms.php">Rooms</a></li>
+            <li><a href="poolAndSpa.php">Pool & Spa</a></li>
+            <li><a href="contact-us.php">Contact Us</a></li>
+            <li><a href="BookNow.php" target="_blank">Book Now</a></li>
         </ul>
 
     </header>
