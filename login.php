@@ -99,7 +99,7 @@
             passwordError.innerText = 'Invalid password';
             return;
         }
-
+        window.location.href = 'BookNow.php';
         alert('You have logged in successfully');
     }
 
