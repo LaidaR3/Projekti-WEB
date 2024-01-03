@@ -1,3 +1,17 @@
+    <?php 
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(isset($_POST['submit-form'])){
+        $perdoruesi = $_POST['email'];
+        $fjalekalimi = $_POST['password'];
+        echo 'Perdoruesi' . $perdoruesi . 'Fjalekalimi:' . $fjalekalimi;
+        exit();
+    } else {
+        echo 'Ju nuk e keni shtyp butonin RUAJ';
+    }
+}
+
+    ?>
+    
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -7,10 +21,6 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-
-    
-
-
         <div class="containerLogIn">
             <div id="mainIMG-Login">
                 <p id="p1-Login">Welcome back</p>
@@ -19,7 +29,7 @@
             </div>
 
         <div class="loginforma">
-            <form id="formLogIn" >
+            <form id="formLogIn" method="POST"  action="<?php echo $_SERVER["PHP_SELF"];?>">
                 <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
                 <p id="log-in">Log In</p>
                 <label for="email">E-mail</label>
@@ -32,6 +42,8 @@
 
 
                             <button type="button" id="submit-form" onclick="validateForm2()">Log in</button>
+                            
+
 
         </div>
     </div>
