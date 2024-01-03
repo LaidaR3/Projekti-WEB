@@ -44,7 +44,7 @@
                 <p>Experience understated luxury in our Superior Double Bed Room.<br>
                     Elegantly designed with a harmonious blend of comfort and style,<br>
                     this space boasts a plush double bed, premium amenit</p>
-                    <a href="./room1.html"><p>VIEW MORE</p></a>
+                    <a href="./room1.php"><p>VIEW MORE</p></a>
             </div>
         </div>
         <div class="dhoma2">
@@ -55,7 +55,7 @@
                 <p>Experience understated luxury in our Superior Double Bed Room.<br>
                     Elegantly designed with a harmonious blend of comfort and style,<br>
                     this space boasts a plush double bed, premium amenities, and more.</p>
-                    <a href="./room2.html"><p>VIEW MORE</p></a>
+                    <a href="./room2.php"><p>VIEW MORE</p></a>
             </div>
         
             <div id="dhomafoto2">
@@ -75,7 +75,7 @@
                 <p>Experience understated luxury in our Superior Double Bed Room.<br>
                     Elegantly designed with a harmonious blend of comfort and style,<br>
                     this space boasts a plush double bed, premium amenities, and more.</p>
-                    <a href="./room3.html"><p>VIEW MORE</p></a>
+                    <a href="./room3.php"><p>VIEW MORE</p></a>
             </div>
         
             
@@ -88,7 +88,7 @@
                 <p>Experience understated luxury in our Superior Double Bed Room.<br>
                     Elegantly designed with a harmonious blend of comfort and style,<br>
                     this space boasts a plush double bed, premium amenities, and more.</p>
-                    <a href="./room4.html"><p>VIEW MORE</p></a>
+                    <a href="./room4.php"><p>VIEW MORE</p></a>
             </div>
             
         
@@ -108,7 +108,7 @@
                 <p>Experience understated luxury in our Superior Double Bed Room.<br>
                     Elegantly designed with a harmonious blend of comfort and style,<br>
                     this space boasts a plush double bed, premium amenities, and more.</p>
-                    <a href="./room5.html"><p>VIEW MORE</p></a>
+                    <a href="./room5.php"><p>VIEW MORE</p></a>
             </div>
             
     </div>

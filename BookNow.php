@@ -14,12 +14,12 @@
     <header class="headerContainer-book">
         <div class="list-book">
             <ul>
-                <li><a href="signUp.html" target="_blank">Sign-up</a></li>
-                <li><a href="login.html" target="_blank">Log-in</a></li>
+                <li><a href="signUp.php" target="_blank">Sign-up</a></li>
+                <li><a href="login.php" target="_blank">Log-in</a></li>
             </ul>
         </div>
         <div class="logo-book">
-            <a href="index.html"><img src="imgs/logo1.png" alt="Logo"></a>
+            <a href="index.php"><img src="imgs/logo1.png" alt="Logo"></a>
         </div>
 
     </header>

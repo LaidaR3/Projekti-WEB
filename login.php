@@ -14,13 +14,13 @@
         <div class="containerLogIn">
             <div id="mainIMG-Login">
                 <p id="p1-Login">Welcome back</p>
-                <a href="./signup.html"><button type="button" class="signUp-button">Sign Up</button></a>
+                <a href="./signup.php"><button type="button" class="signUp-button">Sign Up</button></a>
                 
             </div>
 
         <div class="loginforma">
             <form id="formLogIn" >
-                <a href="index.html"><img src="./imgs/logo1.png" height="40px"></a><br>
+                <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
                 <p id="log-in">Log In</p>
                 <label for="email">E-mail</label>
                             <input type="text" id="email" name="email">

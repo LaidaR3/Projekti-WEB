@@ -15,7 +15,7 @@
     <main>
         <div class="signUp-section">
             <div class="signUp-form">
-                <a href="index.html"><img src="./imgs/logo1.png" height="40px"></a><br>
+                <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
                 <form action="myForm1">
                     <!-- First Name -->
                     <label for="firstname">Full Name</label>
@@ -49,7 +49,7 @@
             <div class="img-signUp">
                 <p id="p-Si">Sign Up</p>
                 <p id="p2-si">Already have an account</p>
-                <a href="login.html" id="login-a" >Log In</a>
+                <a href="login.php" id="login-a" >Log In</a>
                 
             </div>
 
