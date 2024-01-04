@@ -99,8 +99,11 @@
             passwordError.innerText = 'Invalid password';
             return;
         }
+        alert('Welcome back!');
+        setTimeout(function(){
         window.location.href = 'BookNow.php';
-        alert('You have logged in successfully');
+    }, 1000);
+        //alert('You have logged in successfully');
     }
 
 
