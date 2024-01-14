@@ -1,3 +1,26 @@
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST["submit-form"])) {
+            $emri = $_POST['fname'];
+            $numritel = $_POST['phoneNumber'];
+            $email= $_POST['email'];
+            $fjalekalimi = $_POST['password'];
+            echo 'Perdoruesi' . $emri;
+            header('Location:BookNow.php');
+        } else {
+            echo 'Ju nuk keni shtypur butonin Submit';
+        }
+    }
+?>
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +39,8 @@
         <div class="signUp-section">
             <div class="signUp-form">
                 <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
-                <form action="myForm1">
+                <form id="myform1" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>">
+
                     <!-- First Name -->
                     <label for="firstname">Full Name</label>
                     <input type="text" id="fname">
@@ -90,8 +114,9 @@
         let fnameRegex = /^[A-Z][a-z]{1,20}$/;
         let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,20}$/;
-        let phoneRegex = /^\+\d{3}-\d{3}-\d{4}$|^\+\d{10}$/;
-    
+        let phoneRegex = /^\+?\d{1,4}-?\d{1,4}-?\d{1,9}$/;
+
+
         function validateForm() {
             let fnameInput = document.getElementById('fname');
             let emailInput = document.getElementById('email');
