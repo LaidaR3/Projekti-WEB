@@ -168,6 +168,9 @@
 
     
             alert('Form submitted successfully!');
+            setTimeout(function(){
+                window.location.href = 'login.php';
+            }, 1000);
         }
 
 
