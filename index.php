@@ -145,7 +145,7 @@
                     and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy.
                 </p>
-                <a href="poolAndSpa.html"><button>Read More</button></a>
+                <a href="poolAndSpa.php"><button>Read More</button></a>
             </div>
             <img src="imgs/pool5.jpg" alt="pool">
             
