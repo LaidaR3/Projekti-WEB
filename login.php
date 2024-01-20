@@ -34,11 +34,11 @@
                 <p id="log-in">Log In</p>
                 <label for="email">E-mail</label>
                             <input type="text" id="email" name="email">
-                            <div class="errorMessage" id="emailError"></div>
+                            <div class="error-message" id="emailError"></div>
 
                 <label for="password">Password</label>
                             <input type="password" id="password" name="password">
-                            <div class="errorMessage" id="passwordError"></div>
+                            <div class="error-message" id="passwordError"></div>
 
 
                             <button type="button" id="submit-form" onclick="validateForm2()">Log in</button>
