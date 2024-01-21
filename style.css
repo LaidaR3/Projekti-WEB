@@ -894,7 +894,7 @@ ol{
  #img-header{
     font-size: 40px;
     color: #343536;
-    font-style: italic;
+    
     position: relative;
    
     top: 60px; 
@@ -935,6 +935,8 @@ ol{
 }
 
 #pershkrimi {
+    
+
     margin-top: 90px;
     text-align: center;
     font-family: 'Crimson Text', serif;
@@ -945,6 +947,7 @@ ol{
     margin-left: 90px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    
 }
 #doubleRoom{
     color: #363231;
@@ -964,6 +967,7 @@ ol{
 }
 
 .dhoma2 {
+    
     display: flex;
     align-items: center;
     width: 100%;
@@ -994,6 +998,7 @@ ol{
     border: 1px solid #ccc;
     box-sizing: border-box;
     order: -1 !important; /* Changing the order to display before the image */
+    
 }
 
 #doubleRoom2 {
