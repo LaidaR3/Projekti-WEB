@@ -37,39 +37,26 @@
             <div class="left-part">
                 <p id="p1-left">ABOUT OUR RESORT</p>
                 <p id="p2-left">FAQs and House Rules</p>
-                
+                <ol>
                     
-                <button type="button" class="collapsibleCU">Check-in and Check-out time<span class="plus-icon">&#43;</span></button>
-                <div class="contentCU">
+                    <li>Chack-in and Check-out time</li>
                     <p>Check-in at our Resort is from 2:00 PM, and check-out is until 12:00 PM.</p>
-                </div>
-                <hr>
-
-                <button type="button" class="collapsibleCU">Children & Extra Beds<span class="plus-icon">&#43;</span></button>
-                <div class="contentCU">
-                    <p>Children (0-12years) are welcome, free of charge, 0 - 3 years - Crib upon request free,
-                        3+ years - Extra bed upon request € 20 per night
+                    <hr>
+                    <li>Children & Extra Beds</li>
+                    <p>Children (0-12years) are welcome, free of charge, 0 - 3 years - Crib upon request
+                        free, 3+ years - Extra bed upon request
+                        € 20 per night
                     </p>
-                </div>
-                <hr class="collapsibleHR">
-
-                <button type="button" class="collapsibleCU">When is Breakfast and Dinner served<span class="plus-icon">&#43;</span></button>
-                <div class="contentCU">
+                    <hr>
+                    <li>When is Breakfast and Dinner served</li>
                     <p>Breakfast is served from 7am until 10am whereas Dinner is served from 6pm until 8pm</p>
-                </div>
-                <hr class="collapsibleHR">
-
-                <button type="button" class="collapsibleCU">Transportation from and to the airport<span class="plus-icon">&#43;</span></button>
-                <div class="contentCU">
-                    <p>For more information please contact us</p>
-                </div>
-                <hr class="collapsibleHR">
-
-                <button type="button" class="collapsibleCU">Are pets allowed?<span class="plus-icon">&#43;</span></button>
-                <div class="contentCU">
-                    <p>Pets are not allowed</p>
-                </div >
-                
+                    <hr>
+                    <li>Transportaion from and to the airport</li>
+                    <p>For more information please content us</p>
+                    <hr>
+                    <li>Are pets allowed?</li>
+                    <p>Pets are not allowd</p>
+                </ol>
             </div>
             <div class="form-part">
                 <p id="p1-left">CONTACT FORM</p>
@@ -179,20 +166,7 @@
                 alert('Form submitted successfully!');
             }
 
-            var coll = document.getElementsByClassName("collapsibleCU");
-            var i;
 
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
  
     </script>
 
