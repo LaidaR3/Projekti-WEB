@@ -4,15 +4,15 @@ include_once '../models/user.php';
 
 
 if(isset($_POST['registerBtn'])){
-    if(empty($_POST['name']) || empty($_POST['phone'])  || empty($_POST['email'])  || empty($_POST['password'])){
+    if(empty($_POST['fname']) || empty($_POST['phoneNumber'])  || empty($_POST['email'])  || empty($_POST['password'])){
         echo "Fill all fields!";
     }else{
-        $name = $_POST['name'];
+        $name = $_POST['fname'];
+        $phone= $_POST['phoneNumber'];
         $email = $_POST['email'];
-        $phone= $_POST['phone'];
         $password = $_POST['password'];
 
-        $user  = new User($name,$phone,$email,$username,$password);
+        $user  = new User($fname,$phonNumber,$email,$password);
         $userRepository = new UserRepository();
 
         $userRepository->insertUser($user);
