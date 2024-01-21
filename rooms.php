@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <title>Rooms - Monvelli</title>
+     
+
     </head>
     <body>
         <header class="headerContainer">
