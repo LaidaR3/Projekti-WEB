@@ -1444,6 +1444,45 @@ ol{
     border-color: #f5f5f5;
 }
 
+/* COLLAPSIBLE */
+.collapsibleCU {
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    transition: 0.7s;
+    position: relative;
+}
+
+.plus-icon {
+    position: absolute;
+    right: 10px; 
+    top: 40px;
+    transform: translateY(-50%);
+    color:#ef8346;
+    
+}
+
+.collapsibleCU.active {
+    color:#ef8346; 
+}
+
+.contentCU {
+    display: none;
+    padding: 0 18px;
+    overflow: hidden;
+}
+
+.left-part hr{
+    margin-top: 14px;
+}
+
+
 .icons-c{
     display: flex;
     flex-direction: row;
