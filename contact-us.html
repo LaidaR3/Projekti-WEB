@@ -140,45 +140,61 @@
 
 
 
-        <script>
+    <script>
 
-            function validateForm() {
+        function validateForm() {
 
-                let fnameInput = document.getElementById('fname');
-                let lnameInput = document.getElementById('lname');
-                let emailInput = document.getElementById('email');
+            let fnameInput = document.getElementById('fname');
+            let lnameInput = document.getElementById('lname');
+            let emailInput = document.getElementById('email');
 
-                let nameError = document.getElementById('nameError');
-                let lnameError = document.getElementById('lnameError');
-                let emailError = document.getElementById('emailError');
+            let nameError = document.getElementById('nameError');
+            let lnameError = document.getElementById('lnameError');
+            let emailError = document.getElementById('emailError');
 
-                nameError.innerText = '';
-                lnameError.innerText = '';
-                emailError.innerText = '';
+            nameError.innerText = '';
+            lnameError.innerText = '';
+            emailError.innerText = '';
 
-                let fnameRegex = /^[A-Z][a-z]{1,20}$/;
-                let lnameRegex = /^[A-Z][a-z]{1,20}$/;
-                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let fnameRegex = /^[A-Z][a-z]{1,20}$/;
+            let lnameRegex = /^[A-Z][a-z]{1,20}$/;
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                if (!fnameRegex.test(fnameInput.value)) {
-                    nameError.innerText = 'First name should start with a capital letter and be 1-8 characters long.';
-                    return;
-                }
-
-                if (!lnameRegex.test(lnameInput.value)) {
-                    lnameError.innerText = 'Last name should start with a capital letter and be 1-20 characters long.';
-                    return;
-                }
-
-                if (!emailRegex.test(emailInput.value)) {
-                    emailError.innerText = 'Invalid email address.';
-                    return;
-                }
-
-
-                alert('Form submitted successfully!');
+            if (!fnameRegex.test(fnameInput.value)) {
+                nameError.innerText = 'First name should start with a capital letter and be 1-8 characters long.';
+                return;
             }
 
+            if (!lnameRegex.test(lnameInput.value)) {
+                lnameError.innerText = 'Last name should start with a capital letter and be 1-20 characters long.';
+                return;
+            }
+
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.innerText = 'Invalid email address.';
+                return;
+            }
+
+
+            alert('Form submitted successfully!');
+            }
+
+            // Collpasible
+
+            var collapsible = document.getElementsByClassName("collapsibleCU");
+            var i;
+
+            for (i = 0; i < collapsible.length; i++) {
+                collapsible[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
 
  
     </script>
