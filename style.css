@@ -1401,7 +1401,7 @@ ol{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    width: 300px;
+    width: 400px;
 }
 
 #p1-left{
@@ -1462,10 +1462,9 @@ ol{
 .plus-icon {
     position: absolute;
     right: 10px; 
-    top: 40px;
+    top: 35px;
     transform: translateY(-50%);
     color:#ef8346;
-    
 }
 
 .collapsibleCU.active {
