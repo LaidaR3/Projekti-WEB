@@ -936,7 +936,7 @@ ol{
 
 #pershkrimi {
     
-background-color: #eeb699;
+
     margin-top: 90px;
     text-align: center;
     font-family: 'Crimson Text', serif;
@@ -2054,6 +2054,32 @@ input[type=text], input[type=password] {
     transition: 0.5s;
 }
 
+/* btn */
+
+
+#myBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px; 
+    right: 40px; 
+    z-index: 99; 
+    border:none; 
+    outline: none; 
+    background-color:black; 
+    color: white;
+    cursor: pointer; 
+    border-radius: 100%; 
+    font-size: 40px; 
+    padding-top: 27px;
+    padding-right: 27px;
+    padding-left: 27px;
+    padding-bottom: 8px;
+  }
+  
+  #myBtn:hover {
+    transform: scale(1.1); 
+    
+  }
 
 
 
