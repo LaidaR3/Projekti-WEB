@@ -31,14 +31,18 @@
         </header>
         <main>
 
-            <div class="header-Rooms">
+            <!-- <div class="header-Rooms">
                 <img src="./imgs/black2.webp" alt="" height="40%" width="22%">
                 <img src="./imgs/roomsDetails1.jpeg" alt="" height="40%" width="22%">
                 <img src="./imgs/black.jpeg" alt="" height="40%" width="22%">
                 <img src="./imgs/roomsDetails4.webp" alt="" height="40%" width="22%">
             
-            </div> 
-            <p id="img-header"> Welcome to our exquisite hotel rooms, where luxury meets comfort in every detail!</p>
+            </div>  -->
+            <div class="roomsIMG">
+            <p id="img-header"> Welcome to our exquisite hotel rooms!</p>
+            
+        </div>
+            <!-- <img src="./imgs/tryroms1.jpg" alt="" width=100%> -->
             
         <div class="dhoma3">
             <div id="dhomafoto3">
