@@ -39,22 +39,24 @@
             
             </div> 
             <p id="img-header"> Welcome to our exquisite hotel rooms, where luxury meets comfort in every detail!</p>
-            <div class="dhoma1">
-                <div id="dhomafoto">
-                <img id="slideshow" height= "100%" width="40%" >
             
+        <div class="dhoma3">
+            <div id="dhomafoto3">
+                <img id="slideshow3" height="100%" width="100%">
             </div>
-            
-            <div id="pershkrimi">
-                <h1 id="doubleRoom">Double Room</h1>
+            <div id="pershkrimi3">
+                <h1 id="doubleRoom3">Junior Room</h1>
                 <p>Capacity: 1-2 PERSONS</p>
                 <p>Size: 22M2</p>
                 <p>Experience understated luxury in our Superior Double Bed Room.<br>
                     Elegantly designed with a harmonious blend of comfort and style,<br>
-                    this space boasts a plush double bed, premium amenit</p>
-                    <a href="./room1.php"><p>VIEW MORE</p></a>
+                    this space boasts a plush double bed, premium amenities, and more.</p>
+                    <a href="./room3.php"><p>VIEW MORE</p></a>
             </div>
+        
+            
         </div>
+            
         <div class="dhoma2">
             <div id="pershkrimi2">
                 <h1 id="doubleRoom2">Deluxe Room</h1>
@@ -71,22 +73,22 @@
             </div>
         </div>
         
-    
-        <div class="dhoma3">
-            <div id="dhomafoto3">
-                <img id="slideshow3" height="100%" width="100%">
+
+        <div class="dhoma1">
+                <div id="dhomafoto">
+                <img id="slideshow" height= "100%" width="40%" >
+            
             </div>
-            <div id="pershkrimi3">
-                <h1 id="doubleRoom3">Junior Room</h1>
+            
+            <div id="pershkrimi">
+                <h1 id="doubleRoom">Double Room</h1>
                 <p>Capacity: 1-2 PERSONS</p>
                 <p>Size: 22M2</p>
                 <p>Experience understated luxury in our Superior Double Bed Room.<br>
                     Elegantly designed with a harmonious blend of comfort and style,<br>
-                    this space boasts a plush double bed, premium amenities, and more.</p>
-                    <a href="./room3.php"><p>VIEW MORE</p></a>
+                    this space boasts a plush double bed, premium amenit</p>
+                    <a href="./room1.php"><p>VIEW MORE</p></a>
             </div>
-        
-            
         </div>
         <div class="dhoma4">
             <div id="pershkrimi4">

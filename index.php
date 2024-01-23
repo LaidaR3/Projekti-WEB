@@ -11,7 +11,7 @@
     
 </head>
 <body>
-<button onclick="topFunction()" id="myBtn" title="Go to top">	&#8963;</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
     <header class="headerContainer">
         <div class="logo">
             <img src="imgs/logo1.png" alt="Logo">
