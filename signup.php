@@ -63,7 +63,7 @@
                     <div class="error-message" id="passwordConfirmError"></div>
 
                     <div class="error-message" id="emptyInputsError"></div>
-                    <button type="button" id="submit-form" onclick="validateForm()">Sign Up</button>
+                    <button type="submit" id="submit-form" onclick="validateForm()">Sign Up</button>
                 </form>
             </div>
             <div class="img-signUp">
