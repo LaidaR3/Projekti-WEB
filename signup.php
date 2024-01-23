@@ -1,4 +1,6 @@
 <?php
+    include './controller/registerController.php';
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["submit-form"])) {
             $emri = $_POST['fname'];
@@ -12,12 +14,6 @@
         }
     }
 ?>
-
-
-
-
-
-
 
 
 

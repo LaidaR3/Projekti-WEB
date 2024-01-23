@@ -3,7 +3,7 @@ class DatabaseConenction{
     private $server="localhost";
     private $username="root";
     private $password="";
-    private $database = "monvelliDB";
+    private $database = "monvellidb";
 
     function startConnection(){
         try{

@@ -1,5 +1,5 @@
 <?php 
-include_once '../database/databaseConnection.php';
+include 'C:\xampp\htdocs\Projekti WEB-2023\Projekti-WEB\database\databaseConnection';
 
 class UserRepository{
     private $connection;
@@ -12,16 +12,17 @@ class UserRepository{
     function insertUser($user){
         $conn = $this->connection;
 
+        $id = $user->getID();
         $name = $user->getFname();
         $phone = $user->getPhoneNumber();
         $email = $user->getEmail();
         $password = $user->getPassword();
 
-        $sql = "INSERT INTO user (fname,phoneNumber,email,,password) VALUES (?,?,?,?,?,?)";
+        $sql = "INSERT INTO user (ID,fname,phoneNumber,email,password) VALUES (?,?,?,?,?)";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$fname,$phoneNumber,$email,$password]);
+        $statement->execute([$ID,$fname,$phoneNumber,$email,$password]);
 
         echo "<script> alert('User has been inserted successfuly!'); </script>";
     }
@@ -37,10 +38,10 @@ class UserRepository{
         return $users;
     }
 
-    function getUserById($id){
+    function getUserById($ID){
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM user WHERE id='$id'";
+        $sql = "SELECT * FROM user WHERE ID='$ID'";
 
         $statement = $conn->query($sql);
         $user = $statement->fetch();
@@ -48,28 +49,28 @@ class UserRepository{
         return $user;
     }
 
-    function updateUser($fname,$phoneNumber,$email,$password){
+    function updateUser($ID,$fname,$phoneNumber,$email,$password){
          $conn = $this->connection;
 
          $sql = "UPDATE user SET name=?, phone=?, email=?, password=? ";
 
          $statement = $conn->prepare($sql);
 
-         $statement->execute([$fname,$phoneNumber,$email,$password]);
+         $statement->execute([$ID,$fname,$phoneNumber,$email,$password]);
 
          echo "<script>alert('update was successful'); </script>";
     }
 
-    // function deleteUser($name){
-    //     $conn = $this->connection;
+    function deleteUser($fname){
+        $conn = $this->connection;
 
-    //     $sql = "DELETE FROM user WHERE id=?";
+        $sql = "DELETE FROM user WHERE ID=?";
 
-    //     $statement = $conn->prepare($sql);
+        $statement = $conn->prepare($sql);
 
-    //     $statement->execute([$id]);
+        $statement->execute([$ID]);
 
-    //     echo "<script>alert('delete was successful'); </script>";
-    // }
+        echo "<script>alert('delete was successful'); </script>";
+    }
 }
 ?>
