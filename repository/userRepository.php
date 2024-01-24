@@ -1,6 +1,6 @@
 <?php 
-include 'C:\xampp\htdocs\Projekti-WEB\database\databaseConnection';
-include '..\models\user.php';
+include 'C:\xampp\htdocs\Projekti WEB-2023\Projekti-WEB\database\databaseConnection';
+include '.\models\user.php';
 class UserRepository{
     private $connection;
 
