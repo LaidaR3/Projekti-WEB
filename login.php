@@ -1,11 +1,6 @@
-<?php 
-
-    
-
+<?php
 ini_set('session.gc_maxlifetime', 30);
 session_start();
-
-
 
 include 'databaseConnection.php';
 $databaseConnection = new DatabaseConnection();
@@ -21,19 +16,19 @@ if (isset($_POST['submit-form'])) {
     $query->execute();
 
     $user = $query->fetch();
-    
 
-    if ( $password==$user['password']) {
-        
-        echo $user['email'];
+    if ($user && $password == $user['password']) {
+        // Successful login
         $_SESSION['user_id'] = $user['ID']; 
-        header("Location:BookNow.php");
+        $_SESSION['user_role'] = (in_array($email, ['delfinaplakolliii@gmail.com', 'rusinovcilaida13@gmail.com'])) ? 'admin' : 'user';
+        header("Location: BookNow.php");
         exit();
     } else {
         $message = 'Invalid email or password';
     }
 } 
 ?>
+
 
 
 

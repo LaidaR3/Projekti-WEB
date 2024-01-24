@@ -18,32 +18,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="headerContainer-book">
+<header class="headerContainer-book">
         <div class="list-book">
-
             <ul>
-            <?php
-                
-                if (isset($_SESSION['user_id'])):
-                ?>
-                
-                <li><a href="logout.php">Logout</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?>
+                        <!-- Admin navigation links here -->
+                        <li><a href="./offers.php">Add offers</a></li>
+                    <?php endif; ?>
+                    <li><a href="logout.php">Logout</a></li>
                 <?php else: ?>
-                
-                <li><a href="login.php" target="_blank">Log-in</a></li>
+                    <li><a href="login.php" target="_blank">Log-in</a></li>
+                    <li><a href="signUp.php" target="_blank">Sign-up</a></li>
                 <?php endif; ?>
-                <li><a href="signUp.php" target="_blank">Sign-up</a></li>
-                <li><a href="login.php" target="_blank">Log-in</a></li>
             </ul>
         </div>
         <div class="logo-book">
             <a href="index.php"><img src="imgs/logo1.png" alt="Logo"></a>
         </div>
-       
-       
-    
-
     </header>
+
+
     <main>
 
         <div class="hr-b">
