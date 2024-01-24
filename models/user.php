@@ -1,6 +1,6 @@
 <?php
 
-class User{
+class User{//User
     private $ID;
     private $fname;
     private $phoneNumber;
