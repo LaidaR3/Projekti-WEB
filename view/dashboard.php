@@ -20,7 +20,7 @@
              </tr>
 
              <?php 
-             include_once 'C:\xampp\htdocs\Projekti-WEB\repository\userRepository.php';
+             include_once 'C:\xampp\htdocs\Projekti WEB-2023\Projekti-WEB\database\databaseConnection';
 
              
              $userRepository = new UserRepository();
