@@ -14,7 +14,7 @@ if(isset($_POST['submit-form'])){
         //$ID = $username.rand(100,999);
         $user=new user($fname,$phoneNumber,$email,$password);
         // $statement->execute([$id, $name, $phone, $email, $password]);
-         $userRepository = new UserRepository();
+         $userRepository = new userRepository();
 
         $userRepository->insertUser($user);
     }

@@ -20,10 +20,10 @@
              </tr>
 
              <?php 
-             include_once 'C:\xampp\htdocs\Projekti WEB-2023\Projekti-WEB\database\databaseConnection';
-
+             include 'C:\xampp\htdocs\Projekti-WEB\repository\userRepository.php';
+              
              
-             $userRepository = new UserRepository();
+             $userRepository = new userRepository();
 
              $users = $userRepository->getAllUsers();
 

@@ -1,7 +1,7 @@
 <?php 
-include 'C:\xampp\htdocs\Projekti WEB-2023\Projekti-WEB\database\databaseConnection';
-include '.\models\user.php';
-class UserRepository{
+include '..\database\databaseConnection';
+include '..\models\user.php';
+class userRepository{
     private $connection;
 
     function __construct(){

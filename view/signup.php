@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +33,7 @@
     <main>
         <div class="signUp-section">
             <div class="signUp-form">
-                <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
+                <a href="index.php"><img src="../imgs/logo1.png" height="40px"></a><br>
                 <form id="myform1" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>">
 
                     <!-- First Name -->
@@ -65,7 +65,7 @@
                     <button type="button" id="submit-form" onclick="validateForm()" name="submit-form">Sign Up</button>
                 </form>
                 <?php
-include 'C:\xampp\htdocs\Projekti-WEB\controller\registerController.php';?>
+                 include '..\controller\registerController.php';?>
             </div>
             <div class="img-signUp">
                 <p id="p-Si">Sign Up</p>
