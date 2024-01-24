@@ -1,5 +1,5 @@
 <?php 
-include 'C:\xampp\htdocs\Projekti WEB-2023\Projekti-WEB\database\databaseConnection';
+include 'C:\xampp\htdocs\Projekti-WEB\database\databaseConnection';
 
 class UserRepository{
     private $connection;
@@ -22,8 +22,7 @@ class UserRepository{
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$ID,$fname,$phoneNumber,$email,$password]);
-
+        $statement->execute([$user->getID(),$user->getFname(),$user->getPhoneNumber(),$user->getEmail(),$user->getPassword()]);
         echo "<script> alert('User has been inserted successfuly!'); </script>";
     }
 

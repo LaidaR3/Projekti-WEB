@@ -7,8 +7,8 @@
             $numritel = $_POST['phoneNumber'];
             $email= $_POST['email'];
             $fjalekalimi = $_POST['password'];
+            
             echo 'Perdoruesi' . $emri;
-            header('Location:BookNow.php');
         } else {
             echo 'Ju nuk keni shtypur butonin Submit';
         }
@@ -63,7 +63,7 @@
                     <div class="error-message" id="passwordConfirmError"></div>
 
                     <div class="error-message" id="emptyInputsError"></div>
-                    <button type="submit" id="submit-form" onclick="validateForm()">Sign Up</button>
+                    <button type="button" id="submit-form" onclick="validateForm()" name="submit-form">Sign Up</button>
                 </form>
             </div>
             <div class="img-signUp">

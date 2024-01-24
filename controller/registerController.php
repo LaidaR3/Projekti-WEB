@@ -3,13 +3,13 @@ include_once './repository/userRepository.php';
 include_once './models/user.php';
 
 
-if(isset($_POST['registerBtn'])){
+if(isset($_POST['submit-form'])){
     if(empty($_POST['fname']) || empty($_POST['phoneNumber'])  || empty($_POST['email'])  || empty($_POST['password'])){
         echo "Fill all fields!";
     }else{
-        $name = $_POST['fname'];
-        $email = $_POST['phoneNumber'];
-        $phone= $_POST['email'];
+        $fname = $_POST['fname'];
+        $phoneNumber= $_POST['phoneNumber'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
         $ID = $username.rand(100,999);
 
