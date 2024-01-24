@@ -1,5 +1,5 @@
-<?php
-    include './controller/registerController.php';
+<!-- <?php
+    include 'C:\xampp\htdocs\Projekti-WEB\controller\registerController.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["submit-form"])) {
@@ -13,8 +13,7 @@
             echo 'Ju nuk keni shtypur butonin Submit';
         }
     }
-?>
-
+?> -->
 
 
 <!DOCTYPE html>
@@ -30,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
 <body>
-
+ 
     <main>
         <div class="signUp-section">
             <div class="signUp-form">
@@ -65,6 +64,8 @@
                     <div class="error-message" id="emptyInputsError"></div>
                     <button type="button" id="submit-form" onclick="validateForm()" name="submit-form">Sign Up</button>
                 </form>
+                <?php
+include 'C:\xampp\htdocs\Projekti-WEB\controller\registerController.php';?>
             </div>
             <div class="img-signUp">
                 <p id="p-Si">Sign Up</p>

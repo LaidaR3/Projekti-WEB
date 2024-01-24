@@ -11,12 +11,15 @@ if(isset($_POST['submit-form'])){
         $phoneNumber= $_POST['phoneNumber'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $ID = $username.rand(100,999);
-
-        $user  = new User($ID,$fname,$phoneNumber,$email,$username,$password);
-        $userRepository = new UserRepository();
+        //$ID = $username.rand(100,999);
+        $user=new user($fname,$phoneNumber,$email,$password);
+        // $statement->execute([$id, $name, $phone, $email, $password]);
+         $userRepository = new UserRepository();
 
         $userRepository->insertUser($user);
     }
 }
+
+
+
 ?>

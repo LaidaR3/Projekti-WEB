@@ -1,6 +1,6 @@
 <?php 
 include 'C:\xampp\htdocs\Projekti-WEB\database\databaseConnection';
-
+include '..\models\user.php';
 class UserRepository{
     private $connection;
 
@@ -21,8 +21,8 @@ class UserRepository{
         $sql = "INSERT INTO user (ID,fname,phoneNumber,email,password) VALUES (?,?,?,?,?)";
 
         $statement = $conn->prepare($sql);
-
-        $statement->execute([$user->getID(),$user->getFname(),$user->getPhoneNumber(),$user->getEmail(),$user->getPassword()]);
+        $statement->execute([$fname, $phoneNumber, $email,$password]);
+            
         echo "<script> alert('User has been inserted successfuly!'); </script>";
     }
 
