@@ -1,11 +1,11 @@
 <?php 
-include './databaseConnection';
+include './databaseConnection.php';
 include './user.php';
 class userRepository{
     private $connection;
 
     function __construct(){
-        $conn = new DatabaseConnection;
+        $conn = new databaseConnection;
         $this->connection = $conn->startConnection();
     }
 
