@@ -2,8 +2,10 @@
 
     
 
-
+ini_set('session.gc_maxlifetime', 30);
 session_start();
+
+
 
 include 'databaseConnection.php';
 $databaseConnection = new DatabaseConnection();
@@ -15,27 +17,25 @@ if (isset($_POST['submit-form'])) {
     $message = '';
 
     $query = $pdo->prepare('SELECT * FROM user WHERE email = :email');
-    $query->bindParam(':email', $email); // Change from ':username' to ':email'
+    $query->bindParam(':email', $email); 
     $query->execute();
 
     $user = $query->fetch();
     
 
     if ( $password==$user['password']) {
-        // Successful login
+        
         echo $user['email'];
-        $_SESSION['user_id'] = $user['ID']; // Store user ID in session or any other relevant data
+        $_SESSION['user_id'] = $user['ID']; 
         header("Location:BookNow.php");
         exit();
     } else {
         $message = 'Invalid email or password';
     }
-} else {
-    $message = 'You did not click the "Log in" button';
-}
+} 
 ?>
 
-<!-- Your HTML code continues here -->
+
 
 
     
@@ -55,7 +55,12 @@ if (isset($_POST['submit-form'])) {
                 <a href="./signup.php"><button type="button" class="signUp-button">Sign Up</button></a>
                 
             </div>
-
+            <?php
+            if (!empty($message)) : ?>
+            <div class="alert alert-primary">
+                <?php echo $message ?>
+            </div>
+        <?php endif; ?>
         <div class="loginforma">
             <form id="formLogIn" method="POST"  action="<?php echo $_SERVER["PHP_SELF"];?>">
                 <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>

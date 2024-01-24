@@ -20,7 +20,18 @@
 <body>
     <header class="headerContainer-book">
         <div class="list-book">
+
             <ul>
+            <?php
+                
+                if (isset($_SESSION['user_id'])):
+                ?>
+                
+                <li><a href="logout.php">Logout</a></li>
+                <?php else: ?>
+                
+                <li><a href="login.php" target="_blank">Log-in</a></li>
+                <?php endif; ?>
                 <li><a href="signUp.php" target="_blank">Sign-up</a></li>
                 <li><a href="login.php" target="_blank">Log-in</a></li>
             </ul>
@@ -28,6 +39,9 @@
         <div class="logo-book">
             <a href="index.php"><img src="imgs/logo1.png" alt="Logo"></a>
         </div>
+       
+       
+    
 
     </header>
     <main>
