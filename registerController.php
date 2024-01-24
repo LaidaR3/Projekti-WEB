@@ -1,6 +1,6 @@
 <?php
-include_once './repository/userRepository.php';
-include_once './models/user.php';
+include_once './userRepository.php';
+include_once './user.php';
 
 
 if(isset($_POST['submit-form'])){
@@ -12,7 +12,7 @@ if(isset($_POST['submit-form'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
         //$ID = $username.rand(100,999);
-        $user=new user($fname,$phoneNumber,$email,$password);
+        $user=new user(null,$fname,$phoneNumber,$email,$password);
         // $statement->execute([$id, $name, $phone, $email, $password]);
          $userRepository = new userRepository();
 

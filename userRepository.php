@@ -1,6 +1,6 @@
 <?php 
-include '..\database\databaseConnection';
-include '..\models\user.php';
+include './databaseConnection';
+include './user.php';
 class userRepository{
     private $connection;
 
@@ -21,7 +21,7 @@ class userRepository{
         $sql = "INSERT INTO user (ID,fname,phoneNumber,email,password) VALUES (?,?,?,?,?)";
 
         $statement = $conn->prepare($sql);
-        $statement->execute([$fname, $phoneNumber, $email,$password]);
+        $statement->execute([$id, $name, $phone, $email,$password]);
             
         echo "<script> alert('User has been inserted successfuly!'); </script>";
     }

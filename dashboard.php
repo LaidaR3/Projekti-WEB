@@ -20,8 +20,11 @@
              </tr>
 
              <?php 
-             include 'C:\xampp\htdocs\Projekti-WEB\repository\userRepository.php';
-              
+             include './userRepository.php';
+
+             
+             
+
              
              $userRepository = new userRepository();
 

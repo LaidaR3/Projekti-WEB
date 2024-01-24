@@ -1,19 +1,19 @@
-<!-- <?php
-    include 'C:\xampp\htdocs\Projekti-WEB\controller\registerController.php';
+<?php
+    // include_once '..\Projekti-WEB\controller\registerController.php';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST["submit-form"])) {
-            $emri = $_POST['fname'];
-            $numritel = $_POST['phoneNumber'];
-            $email= $_POST['email'];
-            $fjalekalimi = $_POST['password'];
+    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //     if (isset($_POST["submit-form"])) {
+    //         $fname = $_POST['fname'];
+    //         $phoneNumber = $_POST['phoneNumber'];
+    //         $email= $_POST['email'];
+    //         $password = $_POST['password'];
             
-            echo 'Perdoruesi' . $emri;
-        } else {
-            echo 'Ju nuk keni shtypur butonin Submit';
-        }
-    }
-?> -->
+    //         echo 'Perdoruesi' . $fname;
+    //     } else {
+    //         echo 'Ju nuk keni shtypur butonin Submit';
+    //     }
+    // }
+?>
 
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,39 +33,39 @@
     <main>
         <div class="signUp-section">
             <div class="signUp-form">
-                <a href="index.php"><img src="../imgs/logo1.png" height="40px"></a><br>
+                <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
                 <form id="myform1" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>">
 
                     <!-- First Name -->
                     <label for="firstname">Full Name</label>
-                    <input type="text" id="fname">
+                    <input type="text" id="fname"  name="fname">
                     <div class="error-message" id="fnameError"></div>
                     
                     <!-- Phone Number -->
                     <label for="phoneNumber">Phone Number</label>
-                    <input type="text" id="phoneNumber">
+                    <input type="text" id="phoneNumber"  name="phoneNumber">
                     <div class="error-message" id="phoneError"></div>
 
                     <!-- Email -->
                     <label for="email">E-mail</label>
-                    <input type="text" id="email">
+                    <input type="text" id="email"  name="email">
                     <div class="error-message" id="emailError"></div>
 
                     <!-- Password -->
                     <label for="password">Password</label>
-                    <input type="password" id="password">
+                    <input type="password" id="password"  name="password">
                     <div class="error-message" id="passwordError"></div>
 
                     <!-- Password Confirmation-->
                     <label for="passwordConfirm">Confirm Your Password</label>
-                    <input type="password" id="passwordConfirm">
+                    <input type="password" id="passwordConfirm"  name="passwordConfirm">
                     <div class="error-message" id="passwordConfirmError"></div>
 
                     <div class="error-message" id="emptyInputsError"></div>
-                    <button type="button" id="submit-form" onclick="validateForm()" name="submit-form">Sign Up</button>
+                    <input type="submit" id="submit-form" onclick="validateForm()" name="submit-form">Sign Up
                 </form>
                 <?php
-                 include '..\controller\registerController.php';?>
+                 include_once './registerController.php';?>
             </div>
             <div class="img-signUp">
                 <p id="p-Si">Sign Up</p>
