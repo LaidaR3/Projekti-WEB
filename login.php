@@ -1,16 +1,44 @@
-    <?php 
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST['submit-form'])){
-        $perdoruesi = $_POST['email'];
-        $fjalekalimi = $_POST['password'];
-        echo 'Perdoruesi' . $perdoruesi . 'Fjalekalimi:' . $fjalekalimi;
+<?php 
+
+    
+
+
+session_start();
+
+include 'databaseConnection.php';
+$databaseConnection = new DatabaseConnection();
+$pdo = $databaseConnection->startConnection();
+
+if (isset($_POST['submit-form'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $message = '';
+
+    $query = $pdo->prepare('SELECT * FROM user WHERE email = :email');
+    $query->bindParam(':email', $email); // Change from ':username' to ':email'
+    $query->execute();
+
+    $user = $query->fetch();
+    
+
+    if ( $password==$user['password']) {
+        // Successful login
+        echo $user['email'];
+        $_SESSION['user_id'] = $user['ID']; // Store user ID in session or any other relevant data
+        header("Location:BookNow.php");
         exit();
     } else {
-        echo 'Ju nuk e keni shtyp butonin RUAJ';
+        $message = 'Invalid email or password';
     }
+} else {
+    $message = 'You did not click the "Log in" button';
 }
+?>
 
-    ?>
+<!-- Your HTML code continues here -->
+
+
+    
     
     <!DOCTYPE html>
     <html lang="en">
@@ -41,7 +69,7 @@
                             <div class="error-message" id="passwordError"></div>
 
 
-                            <button type="button" id="submit-form" onclick="validateForm2()">Log in</button>
+                            <input type="submit" id="submit-form"  name = "submit-form">
                             
 
 
