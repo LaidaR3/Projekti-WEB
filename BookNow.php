@@ -10,10 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
     $nameb = $_POST['nameb'];
     $surnameb = $_POST['surnameb'];
     $emailb = $_POST['emailb'];
-    $guests= $_POST['guests'];
+    $guests = $_POST['guests'];
     $checkin = $_POST['checkin'];
     $checkout = $_POST['checkout'];
 
+    // Prepare the statement
+    $stmt = $pdo->prepare("INSERT INTO bookroom (userID, nameb, surnameb, emailb, guests, checkin, checkout) VALUES (?, ?, ?, ?, ?, ?, ?)");
+
+    // Bind parameters
     $stmt->bindParam(1, $userID);
     $stmt->bindParam(2, $nameb);
     $stmt->bindParam(3, $surnameb);
@@ -22,9 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
     $stmt->bindParam(6, $checkin);
     $stmt->bindParam(7, $checkout);
 
-    $stmt = $pdo->prepare("INSERT INTO bookroom (userID, nameb, surnameb, emailb, guests, checkin, checkout) VALUES (?, ?, ?, ?, ?, ?, ?)");
-
-    
+    // Execute the statement
     if ($stmt->execute()) {
         echo "Booking successful!";
     } else {
@@ -32,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
     }
 }
 ?>
+
 
 
 
