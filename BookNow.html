@@ -18,19 +18,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="overlay" class="overlay"></div>
 <header class="headerContainer-book">
         <div class="list-book">
             <ul>
-                <?php if (isset($_SESSION['user_id'])): ?>
-                    <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?>
+                <!-- <?php if (isset($_SESSION['user_id'])): ?>
+                    <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?> -->
                         <!-- Admin navigation links here -->
                         <li><a href="./offers.php">Add offers</a></li>
-                    <?php endif; ?>
+                    <!-- <?php endif; ?> -->
                     <li><a href="logout.php">Logout</a></li>
-                <?php else: ?>
+                <!-- <?php else: ?> -->
                     <li><a href="login.php" target="_blank">Log-in</a></li>
                     <li><a href="signUp.php" target="_blank">Sign-up</a></li>
-                <?php endif; ?>
+                <!-- <?php endif; ?> -->
                 <li><a href="view_offers.php">View Offers</a></li>
             </ul>
         </div>
@@ -45,25 +46,42 @@
         <div class="hr-b">
             <hr>
         </div>
-         <div class="check-in-form">
-            <form action="">
-            <div class="checkIN">
-                    <label for="checkin">Check-in</label>
-                   <input type="date" id="checkin" name="checkin"> 
-            </div>
-            <div class="guests">
+        
+         <div class="check-in-form" id="checkInForm">
+
+            <form id="bookingForm"  class="booking-form">
+                <div class="name-b">
+                    <label for="name-b">Name</label>
+                    <input type="text" id="name-b" name="name-b">
+
+                    <label for="surname-b">Surname</label>
+                    <input type="text" id="surname-b" name="surname-b">
+                </div>
+                <div class="e-mail-guest">
+                    <label for="e-mail">Email</label>
+                    <input type="text" id="e-mail" name="e-mail">
+
                     <label for="guests">Guests</label>
                     <input type="number" id="guests" name="guests">
-            </div>              
-            <div class="checkOUT">
-                   <label for="checkout">Check-out</label>     
-                <input type="date" id="checkout" name="checkout" >
+                </div>
+                <div class="checkIN">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" name="checkin">
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" name="checkout">
+                </div>
                 
-            </div>
-                    
+                <div class="submitBTN">
+                    <button type="button" id="openBookingForm" >Book Now</button>
+                </div>
+                <div class="closeBTN">
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </div>
             </form>
-
         </div>
+
+        
+
 
         <div class="avalaible">
             <a><img src="./imgs/hotel bedroom5.jpg" style="height: 150px;"></a>
@@ -74,7 +92,7 @@
                 <p>Including taxes and fees</p>
             </div>
             <div class="searchDates"> 
-                <button id="sd">Search Dates</button> 
+                <button class="openBtn" onclick="openForm()" id="bR">Book Room</button> 
             </div> 
         </div>
         <div class="avalaible2">
@@ -86,7 +104,7 @@
                 <p>Including taxes and fees</p>
             </div>
             <div class="searchDates"> 
-                <button id="sd">Search Dates</button> 
+                <button class="openBtn" onclick="openForm()" id="bR">Book Room</button>
             </div> 
         </div>
         <div class="avalaible2">
@@ -98,7 +116,7 @@
                 <p>Including taxes and fees</p>
             </div>
             <div class="searchDates"> 
-                <button id="sd">Search Dates</button> 
+                <button class="openBtn" onclick="openForm()" id="bR">Book Room</button> 
             </div> 
         </div>
         <div class="avalaible2">
@@ -110,7 +128,7 @@
                 <p>Including taxes and fees</p>
             </div>
             <div class="searchDates"> 
-                <button id="sd">Search Dates</button> 
+                <button class="openBtn" onclick="openForm()" id="bR">Book Room</button> 
             </div> 
         </div>
 
@@ -143,6 +161,16 @@
             
         </footer>
 
+        <script>
+            function openForm() {
+              document.getElementById("checkInForm").style.display = "block";
+            }
+            
+            function closeForm() {
+              document.getElementById("checkInForm").style.display = "none";
+            }
+            </script>
+            
 
 
 

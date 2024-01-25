@@ -1,5 +1,5 @@
 <?php
-include_once '..\Projekti-WEB\controller\registerController.php';
+include_once 'registerController.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["submit-form"])) {
