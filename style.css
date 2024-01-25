@@ -2283,6 +2283,37 @@ input[type=text], input[type=password] {
     
   }
 
+/* Dashboard */
+
+.dashboard1 {
+   
+    justify-content: center; 
+    width: 100%; 
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+.dashboard1 th, .dashboard1 td {
+    border: 0.5px solid white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.dashboard1 th {
+    background-color:#ef8346;
+    color:#363231;
+}
+
+/* Alternating row colors */
+.dashboard1 tr {
+    background-color:#363231 ;
+    color: rgb(238, 233, 233)
+}
+
 
 
 
