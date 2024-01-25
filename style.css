@@ -1820,23 +1820,6 @@ form button{
     border-color: dodgerblue;
 } */
 
-.avalaible{
-    margin-top: 100px;
-    margin-left: 0;
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-
-}
-.cmimi{
-    padding-left: 210px;
-}
 .searchDates{
     display: flex;
     justify-content: flex-start;
@@ -1858,7 +1841,7 @@ form button{
   /* The popup form - hidden by default */
 
   .check-in-form{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
@@ -1989,15 +1972,54 @@ form button{
     background-color: white;
     transition: 0.3s;
 }
-.avalaible2{
-    margin-top: 30px;
+
+.rooms-book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.title-Book p{
+    margin-top: 20px;
+    color: #ef8346;
+    font-size: 40px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 2;
+    word-spacing: 4;
     
+}
+
+.avalaible{
+    margin-top: 100px;
+    margin-left: 0;
     margin-bottom: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    color: #5c5c5c;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+.cmimi{
+    padding-left: 210px;
+    color: #5c5c5c;
+}
+
+.avalaible2{
+    margin-top: 30px;
+    color: #5c5c5c;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
     padding: 15px;
     border: 1px solid #ccc;
     box-sizing: border-box;
