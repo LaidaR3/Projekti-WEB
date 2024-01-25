@@ -1961,7 +1961,11 @@ form button{
     justify-content: center;
   }
 
-
+.errors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
   
   .booking-form button {
     background-color:#ef8346;
@@ -1978,10 +1982,6 @@ form button{
     background-color:#343536;
     color: #ddd;
   }
-
-
-
-
 
 
 #bR:hover{

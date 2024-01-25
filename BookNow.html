@@ -22,16 +22,16 @@
 <header class="headerContainer-book">
         <div class="list-book">
             <ul>
-                <!-- <?php if (isset($_SESSION['user_id'])): ?>
+                 <?php if (isset($_SESSION['user_id'])): ?>
                     <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?> -->
-                        <!-- Admin navigation links here -->
+                        
                         <li><a href="./offers.php">Add offers</a></li>
-                    <!-- <?php endif; ?> -->
+                     <?php endif; ?> 
                     <li><a href="logout.php">Logout</a></li>
-                <!-- <?php else: ?> -->
+                 <?php else: ?> 
                     <li><a href="login.php" target="_blank">Log-in</a></li>
                     <li><a href="signUp.php" target="_blank">Sign-up</a></li>
-                <!-- <?php endif; ?> -->
+                 <?php endif; ?> 
                 <li><a href="view_offers.php">View Offers</a></li>
             </ul>
         </div>
@@ -49,20 +49,31 @@
         
          <div class="check-in-form" id="checkInForm">
 
-            <form id="bookingForm"  class="booking-form">
+            <form id="bookingForm"  class="booking-form" >
                 <div class="name-b">
                     <label for="name-b">Name</label>
                     <input type="text" id="name-b" name="name-b">
+                   
 
                     <label for="surname-b">Surname</label>
                     <input type="text" id="surname-b" name="surname-b">
+                        
+                </div>
+                <div class = "errors">
+                    <div class="error-message" id="nameError"></div>
+                    <div class="error-message" id="lnameError"></div>
                 </div>
                 <div class="e-mail-guest">
                     <label for="e-mail">Email</label>
                     <input type="text" id="e-mail" name="e-mail">
+                    
 
                     <label for="guests">Guests</label>
                     <input type="number" id="guests" name="guests">
+                </div>
+                <div class = "errors">
+                    <div class="error-message" id="emailError"></div>
+                    <div class="error-message" id="guestError"></div>
                 </div>
                 <div class="checkIN">
                     <label for="checkin">Check-in</label>
@@ -72,7 +83,7 @@
                 </div>
                 
                 <div class="submitBTN">
-                    <button type="button" id="openBookingForm" >Book Now</button>
+                    <button type="button" id="openBookingForm" onclick="validateFormBook()" >Book Now</button>
                 </div>
                 <div class="closeBTN">
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
@@ -162,6 +173,7 @@
         </footer>
 
         <script>
+            // Pop Up form
             function openForm() {
               document.getElementById("checkInForm").style.display = "block";
             }
@@ -169,7 +181,52 @@
             function closeForm() {
               document.getElementById("checkInForm").style.display = "none";
             }
-            </script>
+
+
+            //Validimi
+
+            function validateFormBook() {
+
+            let fnameInput = document.getElementById('name-b');
+            let lnameInput = document.getElementById('surname-b');
+            let emailInput = document.getElementById('e-mail');
+            let guestInput = document.getElementById('guest');
+
+            let nameError = document.getElementById('nameError');
+            let lnameError = document.getElementById('lnameError');
+            let emailError = document.getElementById('emailError');
+
+            nameError.innerText = '';
+            lnameError.innerText = '';
+            emailError.innerText = '';
+        
+
+            let fnameRegex = /^[A-Z][a-z]{1,20}$/;
+            let lnameRegex = /^[A-Z][a-z]{1,20}$/;
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+
+            if (!fnameRegex.test(fnameInput.value)) {
+                nameError.innerText = 'First name should start with a capital letter and be 1-8 characters long.';
+                return;
+            }
+
+            if (!lnameRegex.test(lnameInput.value)) {
+                lnameError.innerText = 'Last name should start with a capital letter and be 1-20 characters long.';
+                return;
+            }
+
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.innerText = 'Invalid email address.';
+                return;
+            }
+
+
+
+
+            alert('Form submitted successfully!');
+            }
+        </script>
             
 
 
