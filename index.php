@@ -57,7 +57,7 @@
                     into electronic typesetting, remaining essentially 
                     unchanged. 
                 </p>
-                <a href="AboutUs.html"><button>Read More</button></a>
+                <a href="AboutUs.php"><button>Read More</button></a>
             </div>
             <div class="img2">
                 <img src="imgs/room1.jpg" alt="Room">
@@ -166,7 +166,7 @@
                     and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy.
                 </p>
-                <a href="poolAndSpa.html"><button>Read More</button></a>
+                <a href="poolAndSpa.php"><button>Read More</button></a>
             </div>
         </div>
 
