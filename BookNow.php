@@ -1,7 +1,38 @@
 <?php
+session_start();
 
-    session_start();
+include 'databaseConnection.php';
+$databaseConnection = new DatabaseConnection();
+$pdo = $databaseConnection->startConnection();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
+    $userID = $_SESSION['userID'];
+    $nameb = $_POST['nameb'];
+    $surnameb = $_POST['surnameb'];
+    $emailb = $_POST['emailb'];
+    $guests= $_POST['guests'];
+    $checkin = $_POST['checkin'];
+    $checkout = $_POST['checkout'];
+
+    $stmt->bindParam(1, $userID);
+    $stmt->bindParam(2, $nameb);
+    $stmt->bindParam(3, $surnameb);
+    $stmt->bindParam(4, $emailb);
+    $stmt->bindParam(5, $guests);
+    $stmt->bindParam(6, $checkin);
+    $stmt->bindParam(7, $checkout);
+
+    $stmt = $pdo->prepare("INSERT INTO bookroom (userID, nameb, surnameb, emailb, guests, checkin, checkout) VALUES (?, ?, ?, ?, ?, ?, ?)");
+
+    
+    if ($stmt->execute()) {
+        echo "Booking successful!";
+    } else {
+        echo "Error: " . $stmt->errorInfo()[2]; // Display the error message
+    }
+}
 ?>
+
 
 
 
@@ -23,7 +54,7 @@
         <div class="list-book">
             <ul>
                  <?php if (isset($_SESSION['user_id'])): ?>
-                    <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?> -->
+                    <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?>
                         
                         <li><a href="./offers.php">Add offers</a></li>
                      <?php endif; ?> 
@@ -52,11 +83,11 @@
             <form id="bookingForm"  class="booking-form" >
                 <div class="name-b">
                     <label for="name-b">Name</label>
-                    <input type="text" id="name-b" name="name-b">
+                    <input type="text" id="name-b" name="nameb">
                    
 
                     <label for="surname-b">Surname</label>
-                    <input type="text" id="surname-b" name="surname-b">
+                    <input type="text" id="surname-b" name="surnameb">
                         
                 </div>
                 <div class = "errors">
@@ -65,7 +96,7 @@
                 </div>
                 <div class="e-mail-guest">
                     <label for="e-mail">Email</label>
-                    <input type="text" id="e-mail" name="e-mail">
+                    <input type="text" id="e-mail" name="emailb">
                     
 
                     <label for="guests">Guests</label>
@@ -83,7 +114,7 @@
                 </div>
                 
                 <div class="submitBTN">
-                    <button type="button" id="openBookingForm" onclick="validateFormBook()" >Book Now</button>
+                    <input type="submit" id="openBookingForm" onclick="validateFormBook()" name="submitbtn">
                 </div>
                 <div class="closeBTN">
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
