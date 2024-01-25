@@ -31,6 +31,7 @@
                     <li><a href="login.php" target="_blank">Log-in</a></li>
                     <li><a href="signUp.php" target="_blank">Sign-up</a></li>
                 <?php endif; ?>
+                <li><a href="view_offers.php">View Offers</a></li>
             </ul>
         </div>
         <div class="logo-book">
