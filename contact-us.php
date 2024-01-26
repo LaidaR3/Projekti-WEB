@@ -1,3 +1,42 @@
+<?php
+session_start();
+
+$conn = new mysqli("localhost", "root", "", "monvellidb");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+   
+    try {
+        
+        $sql = "INSERT INTO usermessage (fname, lname, email, message) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $fname, $lname, $email, $message);
+
+        if ($stmt->execute()) {
+            
+            echo "Form submitted successfully!";
+        } else {
+           
+            echo "Error: " . $stmt->error;
+        }
+
+        $stmt->close();
+    } catch (Exception $e) {
+       
+        echo "Error: " . $e->getMessage();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +120,7 @@
                     <p>+30 33 3455 6667</p>
                 </div>
            
-                    <form name="myForm" >
+                    <form name="myForm" action="" method="POST" onsubmit="return validateForm()">
                         <label for="fname">First Name</label>
                         <input type="text" id="fname" name="fname">
                         <div class="error-message" id="nameError"></div>
@@ -98,9 +137,10 @@
                         
                         <label for="femail">Your message</label>
                         <input type="text" id="message" name="message">
+                        <input type="hidden" id="userID" name="userID" value="<?php echo isset($_SESSION['userID']) ? $_SESSION['userID'] : ''; ?>">
+                        <button type="submit" id="submit-form" name="submit-form">Submit</button>
 
-                        <button type="button" id="submit-form" onclick="validateForm()">Submit</button>
-                    </form>
+                       </form>
         
             </div>
         </div>
