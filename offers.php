@@ -11,7 +11,33 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .offer {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .offer:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <header>
