@@ -1858,20 +1858,7 @@ form button{
 
 }
 
-/* .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent; 
-    display: none;
-    z-index: 800; 
-    backdrop-filter: blur(5px); 
-}
-.overlay.active {
-    pointer-events: auto;
-} */
+
 
   .check-in-form form {
     display: flex;
@@ -1934,10 +1921,30 @@ form button{
     outline: none;
   }
 
-  .submitBTN{
+#submitbtn{
     display: flex;
     justify-content: center;
-  }
+    width: 200px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+    background-color: #343536;
+    color:#ef8346;
+}
+
+.submitBTN{
+    display: flex;
+    justify-content: center;
+}
+
+#submitbtn:hover{
+    color:#ef8346;
+    background-color: white;
+    transition: 0.3s;
+}
+
 
   .closeBTN{
     display: flex;
@@ -1961,9 +1968,17 @@ form button{
 
   }
   
-  .booking-form .cancel {
-    background-color:#343536;
-    color: #ddd;
+  #btncancel {
+    background-color:#ef8346;
+    color:#343536;
+    
+  }
+
+  #btncancel:hover{
+    background-color:white;
+    color:#343536;
+    transition: 0.3;
+    
   }
 
 
@@ -2311,7 +2326,7 @@ input[type=text], input[type=password] {
 /* Alternating row colors */
 .dashboard1 tr {
     background-color:#363231 ;
-    color: rgb(238, 233, 233)
+    color: rgb(180, 179, 179)
 }
 
 

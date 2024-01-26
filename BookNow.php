@@ -6,7 +6,14 @@ $databaseConnection = new DatabaseConnection();
 $pdo = $databaseConnection->startConnection();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
-    $userID = $_SESSION['userID'];
+    if (isset($_SESSION['user_id']) && $_SESSION['user_id'] !== null) {
+        $userID = $_SESSION['user_id'];  
+    } else {
+        echo "Error: User ID not found or is null in the session.";
+        var_dump($_SESSION);  
+        exit;
+    }
+
     $nameb = $_POST['nameb'];
     $surnameb = $_POST['surnameb'];
     $emailb = $_POST['emailb'];
@@ -14,10 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
     $checkin = $_POST['checkin'];
     $checkout = $_POST['checkout'];
 
-    // Prepare the statement
+    
     $stmt = $pdo->prepare("INSERT INTO bookroom (userID, nameb, surnameb, emailb, guests, checkin, checkout) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-    // Bind parameters
     $stmt->bindParam(1, $userID);
     $stmt->bindParam(2, $nameb);
     $stmt->bindParam(3, $surnameb);
@@ -26,14 +32,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
     $stmt->bindParam(6, $checkin);
     $stmt->bindParam(7, $checkout);
 
-    // Execute the statement
+    
     if ($stmt->execute()) {
         echo "Booking successful!";
     } else {
-        echo "Error: " . $stmt->errorInfo()[2]; // Display the error message
+        echo "Error: " . $stmt->errorInfo()[2]; 
     }
 }
 ?>
+
 
 
 
@@ -83,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
         
          <div class="check-in-form" id="checkInForm">
 
-            <form id="bookingForm"  class="booking-form" >
+            <form id="bookingForm"  class="booking-form" method="POST" action="<?php echo $_SERVER["PHP_SELF"]?>">
                 <div class="name-b">
                     <label for="name-b">Name</label>
                     <input type="text" id="name-b" name="nameb">
@@ -117,10 +124,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
                 </div>
                 
                 <div class="submitBTN">
-                    <input type="submit" id="openBookingForm" onclick="validateFormBook()" name="submitbtn">
+                    <input type="submit" id="submitbtn" onclick="validateFormBook()" name="submitbtn">
                 </div>
                 <div class="closeBTN">
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    <button type="button" id="btncancel"  onclick="closeForm()">Close</button>
                 </div>
             </form>
         </div>
@@ -229,15 +236,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
             let fnameInput = document.getElementById('name-b');
             let lnameInput = document.getElementById('surname-b');
             let emailInput = document.getElementById('e-mail');
-            let guestInput = document.getElementById('guest');
+            let guestInput = document.getElementById('guests');
 
             let nameError = document.getElementById('nameError');
             let lnameError = document.getElementById('lnameError');
             let emailError = document.getElementById('emailError');
+            let guestError = document.getElementById('guestError');
 
             nameError.innerText = '';
             lnameError.innerText = '';
             emailError.innerText = '';
+            guestError.innerText = '';
         
 
             let fnameRegex = /^[A-Z][a-z]{1,20}$/;
@@ -257,6 +266,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
 
             if (!emailRegex.test(emailInput.value)) {
                 emailError.innerText = 'Invalid email address.';
+                return;
+            }
+
+            let guestsValue = parseInt(guestInput.value);
+
+            if (isNaN(guestsValue)) {
+                guestError.innerText = 'Please enter a valid number for guests.';
+            return;
+            }
+
+            if (guestsValue < 0) {
+                guestError.innerText = 'Number of guests cannot be negative.';
                 return;
             }
 
