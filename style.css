@@ -683,6 +683,31 @@ footer{
 
 
 /*ABOUT US*/
+.aboutIMG{
+    display: flex;
+    background-image: url(imgs/header-aboutus.jpg);
+    background-size: 100% 100%;
+    height:  600px;
+}
+
+
+.aboutIMG{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#foodid{
+    
+    display: flex;
+    justify-content: center;
+    font-family: 'Crimson Text', serif;
+    font-size: 30px;
+    margin-top: 70px;
+    color: black;
+    font-weight: 100;
+    line-height: 2;
+}
 #header1{
     margin-top: 85px;
     margin-left: 50px;

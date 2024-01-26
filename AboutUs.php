@@ -28,7 +28,11 @@ rel="stylesheet">
 
     </header>
     <main>
-        <img src="imgs/header-aboutus.jpg" id="FotoMain" height="600px" width="100%"> 
+    <div class="aboutIMG">
+            <!-- <p id="img-header"> Welcome to Monvelli where modernity and luxury converge!</p> -->
+            
+        </div>
+        
         
         <h1 class="revealing-text" id="header1">About us</h1>
 
@@ -101,10 +105,19 @@ rel="stylesheet">
          
          
          <div class="rooms">
-             <img src="imgs/room-1.jpeg" height="30%" width="30%">
+             <img src="imgs/seaview2.jpg" height="30%" width="30%">
              
              <img src="imgs/room2.jpeg"height="30%" width="30%">
              <img src="imgs/room3.jpeg"height="30%" width="30%">
+         
+         </div>
+         <h1 id="foodid">Experience delicious moments with our delectable menu!<br>
+             <!-- Where every dish is a celebration of flavor and quality ingredients. --> </h1>
+         <div class="rooms">
+             <img src="imgs/food1.jpeg" height="30%" width="30%">
+             
+             <img src="imgs/food3.webp"height="30%" width="30%">
+             <img src="imgs/food4.jpeg"height="30%" width="30%">
          
          </div>
          <!-- <div class="bookResort"> -->
