@@ -12,7 +12,7 @@ class userRepository{
     function insertUser($user){
         $conn = $this->connection;
 
-        $id = $user->getID();
+        $ID = $user->getId();
         $name = $user->getFname();
         $phone = $user->getPhoneNumber();
         $email = $user->getEmail();
@@ -21,7 +21,7 @@ class userRepository{
         $sql = "INSERT INTO user (ID,fname,phoneNumber,email,password) VALUES (?,?,?,?,?)";
 
         $statement = $conn->prepare($sql);
-        $statement->execute([$id, $name, $phone, $email,$password]);
+        $statement->execute([$ID, $name, $phone, $email,$password]);
             
         echo "<script> alert('User has been inserted successfuly!'); </script>";
     }
@@ -51,7 +51,7 @@ class userRepository{
     function updateUser($ID,$fname,$phoneNumber,$email,$password){
          $conn = $this->connection;
 
-         $sql = "UPDATE user SET name=?, phone=?, email=?, password=? ";
+         $sql = "UPDATE user SET fname=?, phoneNumber=?, email=?, password=? where ID = ?";
 
          $statement = $conn->prepare($sql);
 

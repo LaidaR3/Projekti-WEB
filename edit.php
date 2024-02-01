@@ -1,6 +1,6 @@
 <?php
-    $userId = $_GET['id'];
-    include_once '../repository/userRepository.php';
+    $userId = $_GET['ID'];
+    include_once './userRepository.php';
     
     $userRepository = new UserRepository();
     
@@ -57,12 +57,7 @@
                 <?php
                  include_once './registerController.php';?>
             </div>
-            <div class="img-signUp">
-                <p id="p-Si">Sign Up</p>
-                <p id="p2-si">Already have an account</p>
-                <a href="login.php" id="login-a" >Log In</a>
-                
-            </div>
+            
 
         </div>
     </main>
@@ -70,14 +65,14 @@
 
     <?php 
         if(isset($_POST['editBtn'])){
-            $ID = $user['ID'];
-            $fname = $_POST['Fname'];
+            $id = $user['ID'];
+            $fname = $_POST['fname'];
             $phoneNumber = $_POST['phoneNumber'];
             $email = $_POST['email'];
             $password = $_POST['password'];
            
 
-            $userRepository->updateUser($id,$name,$surname,$email,$username,$password);
+            $userRepository->updateUser($ID,$fname,$phoneNumber,$email,$password);
             header("location:dashboard.php");
         }
     ?>

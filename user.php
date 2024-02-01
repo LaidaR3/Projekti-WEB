@@ -1,13 +1,12 @@
 <?php
-
-class user{//User
+class User {
     private $ID;
     private $fname;
     private $phoneNumber;
     private $email;
     private $password;
 
-    function __construct($ID,$fname,$phoneNumber,$email,$password){
+    function __construct($ID, $fname, $phoneNumber, $email, $password) {
         $this->ID = $ID;
         $this->fname = $fname;
         $this->phoneNumber = $phoneNumber;
@@ -15,19 +14,23 @@ class user{//User
         $this->password = $password;
     }
 
-    function getID(){
+    function getID() {
         return $this->ID;
     }
-    function getFname(){
+
+    function getFname() {
         return $this->fname;
     }
-    function getPhoneNumber(){
+
+    function getPhoneNumber() {
         return $this->phoneNumber;
     }
-    function getEmail(){
+
+    function getEmail() {
         return $this->email;
     }
-    function getPassword(){
+
+    function getPassword() {
         return $this->password;
     }
 }
