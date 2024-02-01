@@ -23,12 +23,12 @@
                  <th>PHONE</th>
                  <th>EMAIL</th>
                  <th>PASSWORD</th>
-                 <!-- <th>Edit</th>
-                 <th>Delete</th> -->
+                 <th>Edit</th>
+                 <th>Delete</th>
              </tr>
 
              <?php 
-             include './userRepository.php';
+             include 'userRepository.php';
 
              
              
@@ -47,8 +47,8 @@
             <td>{$user['phoneNumber']}</td>
             <td>{$user['email']}</td>
             <td>{$user['password']}</td>
-            <!--  <td><a href='edit.php?id={$user['ID']}'>Edit</a></td>
-            <td><a href='delete.php?id={$user['ID']}'>Delete</a></td> -->
+            <td><a href='edit.php?id=$user[ID]'>Edit</a></td>
+            <td><a href='delete.php?id=$user[ID]'>Delete</a></td>
         </tr>
     ";
              }

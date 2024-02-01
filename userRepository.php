@@ -57,19 +57,21 @@ class userRepository{
 
          $statement->execute([$ID,$fname,$phoneNumber,$email,$password]);
 
-         echo "<script>alert('update was successful'); </script>";
+         echo "<script>alert('Update was successful'); </script>";
     }
 
-    function deleteUser($fname){
+    function deleteUser($ID) {
         $conn = $this->connection;
-
+    
         $sql = "DELETE FROM user WHERE ID=?";
-
+    
         $statement = $conn->prepare($sql);
-
+    
         $statement->execute([$ID]);
-
-        echo "<script>alert('delete was successful'); </script>";
+    
+        echo "<script>alert('Delete was successful');</script>";
     }
-}
+    
+    }
+
 ?>
