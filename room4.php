@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twin Room</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+rel="stylesheet">
 </head>
 <body>
     <header class="headerContainer">
@@ -45,25 +49,26 @@
     <p id="amenities-header">Amenities</p>
 <div class="amenities">
     <div class="amenities1-room1">
-       <ol>
-           <li><img src="imgs/pool.jpg"height="30px" alt="">Pool</li>
-           <li><img src="imgs/food.jpg"height="30px" alt="">Breakfast</li>
-           <li><img src="imgs/roomservice.jpg"height="30px" alt="">Room Service</li>
-       </ol>
-    </div>
-    <div class="amenities2-room1">
-       <ol>
-           <li><img src="imgs/Parking.jpg" height="30px">Parking</li>
-           <li><img src="imgs/gym.jpg" height="30px" alt="">Gym</li>
-           <li><img src="imgs/bar.jpg" height="30px" alt="">Mini Bar</li>
-       </ol>
-    </div>
-    <div class="amenities1-room1">
-       <ol>
-           <li><img src="imgs/pool.jpg"height="30px" alt="">Pool</li>
-           <li><img src="imgs/food.jpg"height="30px" alt="">Breakfast</li>
-           <li><img src="imgs/roomservice.jpg"height="30px" alt="">Room Service</li>
-       </ol>
+    <ol>
+            <li><img src="imgs/poolicon.png" alt="">Pool</li>
+            <li><img src="imgs/roomserviceicon.png"height="30px" alt="">Room Service</li>
+                <li><img src="imgs/brkicon.png"height="30px" alt="">Breakfast</li>
+                
+            </ol>
+         </div>
+         <div class="amenities2-room1">
+            <ol>
+                <li><img src="imgs/wifi.png" height="30px">Wifi</li>
+                <li><img src="imgs/gymicon.png" height="30px" alt="">Gym</li>
+                <li><img src="imgs/baricon.png" height="30px" alt="">Mini Bar</li>
+            </ol>
+         </div>
+         <div class="amenities1-room1">
+            <ol>
+                <li><img src="imgs/poolicon.png" alt="">Pool</li>
+                <li><img src="imgs/brkicon.png"height="30px" alt="">Breakfast</li>
+                <li><img src="imgs/roomserviceicon.png"height="30px" alt="">Room Service</li>
+            </ol>
     </div>
     
 </div>
