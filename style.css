@@ -2325,7 +2325,7 @@ input[type=text], input[type=password] {
 
 /* Dashboard */
 
-.dashboard1 {
+.userDashboard {
    
     justify-content: center; 
     width: 100%; 
@@ -2334,7 +2334,7 @@ input[type=text], input[type=password] {
 }
 
 
-.dashboard1 th, .dashboard1 td {
+.userDashboard th, .userDashboard td {
     border: 0.5px solid white;
     padding-left: 30px;
     padding-right: 30px;
@@ -2343,18 +2343,29 @@ input[type=text], input[type=password] {
     text-align: left;
 }
 
-.dashboard1 th {
+.userDashboard th {
     background-color:#ef8346;
     color:#363231;
 }
 
-/* Alternating row colors */
-.dashboard1 tr {
+.userDashboard tr {
     background-color:#363231 ;
     color: rgb(180, 179, 179)
 }
 
 
+
+/*User Dashboard page*/
+
+ .userDashboard tr a{
+    color:#ef8346;
+    text-decoration: none;
+}
+
+.userDashboard tr a:hover{
+    color: #ddd;
+    transition: 0.3s;
+}
 
 
 

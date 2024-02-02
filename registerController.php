@@ -4,7 +4,8 @@ include_once './user.php';
 
 
 if(isset($_POST['submit-form'])){
-    if(empty($_POST['fname']) || empty($_POST['phoneNumber'])  || empty($_POST['email'])  || empty($_POST['password'])){
+    if(empty($_POST['fname']) || empty($_POST['phoneNumber'])  || empty($_POST['email'])  
+    || empty($_POST['password'])){
         echo "Fill all fields!";
     }else{
         $fname = $_POST['fname'];

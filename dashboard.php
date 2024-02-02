@@ -11,20 +11,20 @@
 
 <header class="headerContainer">
     <div class="logo">
-        <img src="imgs/logo1.png" alt="Logo">
+        <a href="index.php"><img src="imgs/logo1.png" alt="Logo"></a>
     </div>
     
 </header>
 <body>
-    <table class="dashboard1">
+    <table class="userDashboard">
              <tr>
                 <th>ID</th>
                  <th>NAME</th>
                  <th>PHONE</th>
                  <th>EMAIL</th>
                  <th>PASSWORD</th>
-                 <th>Edit</th>
-                 <th>Delete</th>
+                 <th>EDIT USER</th>
+                 <th>DELETE USER</th>
              </tr>
 
              <?php 

@@ -50,19 +50,20 @@ if (isset($_POST['submit-form'])) {
                 <a href="./signup.php"><button type="button" class="signUp-button">Sign Up</button></a>
                 
             </div>
-            <?php
-            if (!empty($message)) : ?>
-            <div class="alert alert-primary">
-                <?php echo $message ?>
-            </div>
-        <?php endif; ?>
+            
         <div class="loginforma">
             <form id="formLogIn" method="POST"  action="<?php echo $_SERVER["PHP_SELF"];?>">
                 <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
                 <p id="log-in">Log In</p>
-                <label for="email">E-mail</label>
-                            <input type="text" id="email" name="email">
-                            <div class="error-message" id="emailError"></div>
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email">
+                    <div class="error-message" id="emailError"></div>
+                        <?php
+                            if (!empty($message)) : ?>
+                            <div class="alert alert-primary">
+                                <?php echo $message ?>
+                            </div>
+                            <?php endif; ?>
 
                 <label for="password">Password</label>
                             <input type="password" id="password" name="password">
