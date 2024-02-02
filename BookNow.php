@@ -66,9 +66,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?>
                        <li><a href="./offers.php">Add offers</a></li>
-                       <li><a href="./dashboard.php">User Dashboard</a></li>
+                       <li><a href="./dashboard.php">Users</a></li>
+                       <li><a href="./RoomsDashboard.php">Room Reservations</a></li>
                     <?php endif; ?> 
-                        <li><a href="view_offers.php">View Offers</a></li>
+                        <li><a href="view_offers.php">Offers</a></li>
                     <?php else: ?> 
                        <li><a href="login.php" target="_blank">Log-in</a></li>
                        <li><a href="signUp.php" target="_blank">Sign-up</a></li>

@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="error-message" id="passwordConfirmError"></div>
 
                     <div class="error-message" id="emptyInputsError"></div>
-                    <input type="submit" id="submit-form" onclick="validateForm()" name="submit-form">Sign Up
+                    <input type="submit" id="submit-form" onclick="validateForm()" name="submit-form">
                 </form>
                 <?php
                  include_once './registerController.php';?>
