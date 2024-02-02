@@ -1,18 +1,17 @@
 
 <?php
   
-    $userId = $_GET['id'];
+    $userId = $_GET['userID'];
     include 'userRepository.php';
 
     
     
     $userRepository = new UserRepository();
     
-    $user  = $userRepository->getUserById($userId);
+    $user  = $userRepository->getUserByUserId($userId);
 
     if(isset($_POST['editBtn'])){
-        $id=$user['id'];
-        $userID= $user['userID'];
+        $userID= $bookroom['roomID'];
         $nameb = $_POST['nameb'];
         $surnameb = $_POST['surnameb'];
         $emailb = $_POST['emailb'];
@@ -47,11 +46,11 @@
             <form id="bookingForm"  class="booking-form" method="POST" action="<?php echo $_SERVER["PHP_SELF"]?>">
                 <div class="name-b">
                     <label for="name-b">Name</label>
-                    <input type="text" id="name-b" name="nameb">
+                    <input type="text" id="name-b" name="nameb" value="<?=$bookroom['nameb']?>">
                    
 
                     <label for="surname-b">Surname</label>
-                    <input type="text" id="surname-b" name="surnameb">
+                    <input type="text" id="surname-b" name="surnameb" value="<?=$bookroom['surnameb']?>">
                         
                 </div>
                 <div class = "errors">
@@ -60,11 +59,11 @@
                 </div>
                 <div class="e-mail-guest">
                     <label for="e-mail">Email</label>
-                    <input type="text" id="e-mail" name="emailb">
+                    <input type="text" id="e-mail" name="emailb" value="<?=$bookroom['emailb']?>">
                     
 
                     <label for="guests">Guests</label>
-                    <input type="number" id="guests" name="guests">
+                    <input type="number" id="guests" name="guests"value="<?=$bookroom['guests']?>">
                 </div>
                 <div class = "errors">
                     <div class="error-message" id="emailError"></div>
@@ -72,9 +71,9 @@
                 </div>
                 <div class="checkIN">
                     <label for="checkin">Check-in</label>
-                    <input type="date" id="checkin" name="checkin">
+                    <input type="date" id="checkin" name="checkin" value="<?=$bookroom['checkin']?>">
                     <label for="checkout">Check-out</label>
-                    <input type="date" id="checkout" name="checkout">
+                    <input type="date" id="checkout" name="checkout"value="<?=$bookroom['checkout']?>">
                 </div>
                 <div class="submitbtn-edit">
                     <input type="submit" name="editBtn" value="save" id="submitbtn">

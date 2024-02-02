@@ -32,33 +32,26 @@
         <?php 
              include './userRepository.php';
 
-             
-             
-
-             
              $userRepository = new userRepository();
 
-             $users = $userRepository->getAllUsers();
+             $users = $userRepository->getAllBookRooms();
 
-             foreach($users as $user){
-                echo 
-            "
-                <tr>
-                    <td>{$book_room['userID']}</td>
-                    <td>{$book_room['nameb']}</td>
-                    <td>{$book_room['surnameb']}</td>
-                    <td>{$book_room['emailb']}</td>
-                    <td>{$book_room['guests']}</td>
-                    <td>{$book_room['checkin']}</td>
-                    <td>{$book_room['checkout']}</td>
-                    <td><a href='edit.php?id=$book_room[ID]'>Edit</a></td>
-                    <td><a href='delete.php?id=$book_room[ID]'>Delete</a></td>
-                </tr>
-            ";
+             foreach($users as $bookroom){
+                echo "
+                    <tr>
+                        <td>{$bookroom['roomID']}</td>
+                        <td>{$bookroom['nameb']}</td>
+                        <td>{$bookroom['surnameb']}</td>
+                        <td>{$bookroom['emailb']}</td>
+                        <td>{$bookroom['guests']}</td>
+                        <td>{$bookroom['checkin']}</td>
+                        <td>{$bookroom['checkout']}</td>
+                        <td><a href='edit.php?id={$bookroom['userID']}'>Edit</a></td>
+                        <td><a href='delete.php?id={$bookroom['userID']}'>Delete</a></td>
+                    </tr>
+                ";
              }
              ?>
-
-
 
     </table>
 </body>

@@ -40,17 +40,17 @@
 
              foreach($users as $user){
                 echo 
-              "
-        <tr>
-            <td>{$user['ID']}</td>
-            <td>{$user['fname']}</td>
-            <td>{$user['phoneNumber']}</td>
-            <td>{$user['email']}</td>
-            <td>{$user['password']}</td>
-            <td><a href='edit.php?id=$user[ID]'>Edit</a></td>
-            <td><a href='delete.php?id=$user[ID]'>Delete</a></td>
-        </tr>
-    ";
+            "
+                <tr>
+                    <td>{$user['ID']}</td>
+                    <td>{$user['fname']}</td>
+                    <td>{$user['phoneNumber']}</td>
+                    <td>{$user['email']}</td>
+                    <td>{$user['password']}</td>
+                    <td><a href='edit.php?id=$user[ID]'>Edit</a></td>
+                    <td><a href='delete.php?id=$user[ID]'>Delete</a></td>
+                </tr>
+            ";
              }
              ?>
     </table>

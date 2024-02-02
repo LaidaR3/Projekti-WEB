@@ -40,7 +40,7 @@ class userRepository{
     function getAllBookRooms(){
         $conn = $this->connection;
     
-        $sql = "SELECT * FROM book_room";
+        $sql = "SELECT * FROM bookroom";
     
         $statement = $conn->query($sql);
         $bookRooms = $statement->fetchAll();
@@ -49,16 +49,28 @@ class userRepository{
     }
     
 
-    function getUserByIDs($ID, $userID) {
+    function getUserById($ID) {
         $conn = $this->connection;
-    
-        $sql = "SELECT * FROM user WHERE ID = ? AND userID = ?";
-    
+
+        $sql = "SELECT * FROM user WHERE ID = ?";
+
         $statement = $conn->prepare($sql);
-        $statement->execute([$ID, $userID]);
-    
+        $statement->execute([$ID]);
+
         return $statement->fetch();
-    
+    }
+
+    function getUserByUserId($userID) {
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM user WHERE userID = ?";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$userID]);
+
+        return $statement->fetch();
+    }
+}
 
     function updateUser($ID,$fname,$phoneNumber,$email,$password){
          $conn = $this->connection;
@@ -97,6 +109,6 @@ class userRepository{
         echo "<script>alert('Delete was successful');</script>";
     }
     
-    }
+    
 
 ?>
