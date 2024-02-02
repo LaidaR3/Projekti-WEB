@@ -1,4 +1,32 @@
 
+<?php
+  
+    $userId = $_GET['id'];
+    include 'userRepository.php';
+
+    
+    
+    $userRepository = new UserRepository();
+    
+    $user  = $userRepository->getUserById($userId);
+
+    if(isset($_POST['editBtn'])){
+        $id=$user['id'];
+        $userID= $user['userID'];
+        $nameb = $_POST['nameb'];
+        $surnameb = $_POST['surnameb'];
+        $emailb = $_POST['emailb'];
+        $guests = $_POST['guests'];
+        $checkin = $_POST['checkin'];
+        $checkout = $_POST['checkout'];
+       
+
+        $userRepository->updateUser($roomID,$userID,$nameb,$surnameb,$emailb,$guests,$checkin,$checkout);
+        header("location:RoomsDashboard.php");
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

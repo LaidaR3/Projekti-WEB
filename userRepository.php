@@ -37,16 +37,28 @@ class userRepository{
         return $users;
     }
 
-    function getUserById($ID){
+    function getAllBookRooms(){
         $conn = $this->connection;
-
-        $sql = "SELECT * FROM user WHERE id='$ID'";
-
+    
+        $sql = "SELECT * FROM book_room";
+    
         $statement = $conn->query($sql);
-        $user = $statement->fetch();
-
-        return $user;
+        $bookRooms = $statement->fetchAll();
+    
+        return $bookRooms;
     }
+    
+
+    function getUserByIDs($ID, $userID) {
+        $conn = $this->connection;
+    
+        $sql = "SELECT * FROM user WHERE ID = ? AND userID = ?";
+    
+        $statement = $conn->prepare($sql);
+        $statement->execute([$ID, $userID]);
+    
+        return $statement->fetch();
+    
 
     function updateUser($ID,$fname,$phoneNumber,$email,$password){
          $conn = $this->connection;
@@ -59,6 +71,19 @@ class userRepository{
 
          echo "<script>alert('Update was successful'); </script>";
     }
+
+    function updateReservation($roomID, $userID, $name, $surname, $email, $guests, $checkin, $checkout) {
+        $conn = $this->connection;
+    
+        $sql = "UPDATE room_reservation SET name=?, surname=?, email=?, guests=?, checkin=?, checkout=? WHERE roomID = ?";
+    
+        $statement = $conn->prepare($sql);
+    
+        $statement->execute([$name, $surname, $email, $guests, $checkin, $checkout, $roomID]);
+    
+        echo "<script>alert('Update was successful');</script>";
+    }
+    
 
     function deleteUser($ID) {
         $conn = $this->connection;
