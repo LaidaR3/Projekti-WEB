@@ -161,6 +161,9 @@ mysqli_close($conn);
                                 <br>
 
                                 <input type="submit" name="submit_booking" value="Submit Booking">
+                                <?php if ($_SESSION['user_role'] === 'admin'): ?>
+    <a href="delete_offer.php?offer_id=<?php echo $offer['offersID']; ?>" class="delete-button">Delete Offer</a>
+<?php endif; ?>
                                 
                             </form>
                         </div>
