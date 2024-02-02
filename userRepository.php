@@ -105,9 +105,23 @@ class userRepository{
     
         $statement->execute([$ID]);
     
-        echo "<script>alert('Delete was successful');</script>";
+        echo "<script>alert('User was deleted was successfully');</script>";
     }
     
-}
 
+
+
+
+    function deleteRoomReservation($roomID) {
+    $conn = $this->connection;
+
+    $sql = "DELETE FROM bookroom WHERE roomID=?";
+
+    $statement = $conn->prepare($sql);
+
+    $statement->execute([$roomID]);
+
+    echo "<script>alert('Your reservation was deleted successfully');</script>";
+}
+}
 ?>
