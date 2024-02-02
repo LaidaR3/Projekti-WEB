@@ -1,3 +1,5 @@
+
+
 <?php
 session_start();
 
@@ -33,3 +35,4 @@ if (isset($_GET['offer_id'])) {
     echo "Invalid offer ID";
 }
 ?>
+
