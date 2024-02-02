@@ -2354,9 +2354,6 @@ input[type=text], input[type=password] {
 }
 
 
-
-/*User Dashboard page*/
-
  .userDashboard tr a{
     color:#ef8346;
     text-decoration: none;
@@ -2369,7 +2366,38 @@ input[type=text], input[type=password] {
 
 
 
+/*Edit book room form*/
 
+.check-in-form-edit{
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+
+}
+
+
+
+
+
+  .check-in-form-edit form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+   
+  }
+  
+
+  .submitbtn-edit{
+    display: flex;
+    justify-content:center ;
+  }
 
 
 
