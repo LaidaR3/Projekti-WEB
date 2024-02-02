@@ -1,31 +1,35 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_role'])) {
     header("Location: login.php");
     exit();
 }
 
-$conn = new mysqli("localhost", "root", "", "monvellidb");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($_SESSION['user_role'] !== 'admin') {
+    header("Location: login.php");
+    exit();
 }
 
-$offerId = $_POST['id']; // Change 'offersID' to 'id'
+if (isset($_GET['offer_id'])) {
+    $offerId = $_GET['offer_id'];
 
-$sql = "DELETE FROM offers WHERE offersID = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $offerId);
+    $conn = new mysqli("localhost", "root", "", "monvellidb");
 
-if ($stmt->execute()) {
-    echo 'success';
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Implement the deletion logic here
+    $deleteQuery = "DELETE FROM offers WHERE offersID = $offerId";
+    if ($conn->query($deleteQuery) === TRUE) {
+        echo "Offer deleted successfully";
+    } else {
+        echo "Error deleting offer: " . $conn->error;
+    }
+
+    mysqli_close($conn);
 } else {
-    echo 'Error: ' . $stmt->error;
+    echo "Invalid offer ID";
 }
-
-$stmt->close();
-$conn->close();
-?>
-
 ?>
