@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -7,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Check if the user has admin or user role
+
 if ($_SESSION['user_role'] !== 'admin' && $_SESSION['user_role'] !== 'user') {
     header("Location: login.php");
     exit();
@@ -21,6 +20,29 @@ if ($conn->connect_error) {
 
 $offers = mysqli_query($conn, "SELECT * FROM offers");
 $offers = mysqli_fetch_all($offers, MYSQLI_ASSOC);
+
+
+if (isset($_POST['submit_booking'])) {
+    
+    $offer_id = $_POST['offer_id'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+
+    $insertQuery = "INSERT INTO bookings (user_id, offer_id, name, email) VALUES ('{$_SESSION['user_id']}', '$offer_id', '$name', '$email')";
+    if (mysqli_query($conn, $insertQuery)) {
+        
+        $successMessage = "Booking submitted successfully!";
+    } else {
+     
+        $successMessage = "Error submitting booking. Please try again.";
+    }
+}
+
+
+$bookings = mysqli_query($conn, "SELECT * FROM bookings WHERE user_id = '{$_SESSION['user_id']}'");
+$bookings = mysqli_fetch_all($bookings, MYSQLI_ASSOC);
+
 
 mysqli_close($conn);
 ?>
