@@ -1,16 +1,16 @@
 
 <?php
   
-    $userId = $_GET['userID'];
+    $roomID = $_GET['id'];
     include 'userRepository.php';
 
     
     
     $userRepository = new UserRepository();
     
-    $user  = $userRepository->getUserByUserId($userId);
+    $bookroom  = $userRepository->getUserByRoomID($roomID);
 
-    if(isset($_POST['editBtn'])){
+    if(isset($_POST['edit-Btn'])){
         $userID= $bookroom['roomID'];
         $nameb = $_POST['nameb'];
         $surnameb = $_POST['surnameb'];
@@ -20,7 +20,8 @@
         $checkout = $_POST['checkout'];
        
 
-        $userRepository->updateUser($roomID,$userID,$nameb,$surnameb,$emailb,$guests,$checkin,$checkout);
+        $userRepository->updateReservation($roomID, $userID, $nameb, $surnameb, $emailb, $guests, $checkin, $checkout);
+
         header("location:RoomsDashboard.php");
     }
 
@@ -43,7 +44,7 @@
     <main>
         <div class="check-in-form-edit" id="checkInForm-edit">
 
-            <form id="bookingForm"  class="booking-form" method="POST" action="<?php echo $_SERVER["PHP_SELF"]?>">
+            <form id="bookingForm"  class="booking-form" method="POST" >
                 <div class="name-b">
                     <label for="name-b">Name</label>
                     <input type="text" id="name-b" name="nameb" value="<?=$bookroom['nameb']?>">
@@ -76,7 +77,7 @@
                     <input type="date" id="checkout" name="checkout"value="<?=$bookroom['checkout']?>">
                 </div>
                 <div class="submitbtn-edit">
-                    <input type="submit" name="editBtn" value="save" id="submitbtn">
+                    <input type="submit" name="edit-Btn" value="save" id="submitbtn">
                 </div>
             </form>
         </div>

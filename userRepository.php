@@ -60,17 +60,16 @@ class userRepository{
         return $statement->fetch();
     }
 
-    function getUserByUserId($userID) {
+    function getUserByRoomID($roomID) {
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM user WHERE userID = ?";
+        $sql = "SELECT * FROM bookroom WHERE roomID = ?";
 
         $statement = $conn->prepare($sql);
-        $statement->execute([$userID]);
+        $statement->execute([$roomID]);
 
         return $statement->fetch();
     }
-}
 
     function updateUser($ID,$fname,$phoneNumber,$email,$password){
          $conn = $this->connection;
@@ -87,11 +86,11 @@ class userRepository{
     function updateReservation($roomID, $userID, $name, $surname, $email, $guests, $checkin, $checkout) {
         $conn = $this->connection;
     
-        $sql = "UPDATE room_reservation SET name=?, surname=?, email=?, guests=?, checkin=?, checkout=? WHERE roomID = ?";
+        $sql = "UPDATE bookroom SET nameb=?, surnameb=?, emailb=?, guests=?, checkin=?, checkout=? WHERE roomID = ?";
     
         $statement = $conn->prepare($sql);
     
-        $statement->execute([$name, $surname, $email, $guests, $checkin, $checkout, $roomID]);
+        $statement->execute([$name, $surname, $email, $guests, $checkin, $checkout, $roomID]);;
     
         echo "<script>alert('Update was successful');</script>";
     }
@@ -109,6 +108,6 @@ class userRepository{
         echo "<script>alert('Delete was successful');</script>";
     }
     
-    
+}
 
 ?>

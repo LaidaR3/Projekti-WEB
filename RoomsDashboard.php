@@ -46,8 +46,8 @@
                         <td>{$bookroom['guests']}</td>
                         <td>{$bookroom['checkin']}</td>
                         <td>{$bookroom['checkout']}</td>
-                        <td><a href='edit.php?id={$bookroom['userID']}'>Edit</a></td>
-                        <td><a href='delete.php?id={$bookroom['userID']}'>Delete</a></td>
+                        <td><a href='editBookRoom.php?id={$bookroom['roomID']}'>Edit</a></td>
+                        <td><a href='deleteBookRoom.php?id={$bookroom['roomID']}'>Delete</a></td>
                     </tr>
                 ";
              }
