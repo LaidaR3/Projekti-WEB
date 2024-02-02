@@ -40,7 +40,7 @@ class userRepository{
     function getUserById($ID){
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM user WHERE ID='$ID'";
+        $sql = "SELECT * FROM user WHERE id='$ID'";
 
         $statement = $conn->query($sql);
         $user = $statement->fetch();
@@ -55,7 +55,7 @@ class userRepository{
 
          $statement = $conn->prepare($sql);
 
-         $statement->execute([$ID,$fname,$phoneNumber,$email,$password]);
+         $statement->execute([$fname,$phoneNumber,$email,$password,$ID]);
 
          echo "<script>alert('Update was successful'); </script>";
     }

@@ -1,10 +1,26 @@
 <?php
-    $userId = $_GET['ID'];
-    include_once './userRepository.php';
+  
+    $userId = $_GET['id'];
+    include 'userRepository.php';
+
+    
     
     $userRepository = new UserRepository();
     
     $user  = $userRepository->getUserById($userId);
+
+    if(isset($_POST['editBtn'])){
+        $ID = $user['ID'];
+        $fname = $_POST['fname'];
+        $phoneNumber = $_POST['phoneNumber'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+       
+
+        $userRepository->updateUser($ID,$fname,$phoneNumber,$email,$password);
+        header("location:dashboard.php");
+    }
+
 
 ?>
 
@@ -27,26 +43,26 @@
         <div class="signUp-section">
             <div class="signUp-form">
                 <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
-                <form id="myform1" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>">
+                <form id="myform1" method="POST" action="">
 
                     <!-- First Name -->
                     <label for="firstname">Full Name</label>
-                    <input type="text" id="fname"  name="fname">
+                    <input type="text" id="fname"  name="fname" value="<?=$user['fname']?>">
                     <div class="error-message" id="fnameError"></div>
                     
                     <!-- Phone Number -->
                     <label for="phoneNumber">Phone Number</label>
-                    <input type="text" id="phoneNumber"  name="phoneNumber">
+                    <input type="text" id="phoneNumber"  name="phoneNumber" value="<?=$user['phoneNumber']?>">
                     <div class="error-message" id="phoneError"></div>
 
                     <!-- Email -->
                     <label for="email">E-mail</label>
-                    <input type="text" id="email"  name="email">
+                    <input type="text" id="email"  name="email" value="<?=$user['email']?>">
                     <div class="error-message" id="emailError"></div>
 
                     <!-- Password -->
                     <label for="password">Password</label>
-                    <input type="password" id="password"  name="password">
+                    <input type="password" id="password"  name="password"value="<?=$user['password']?>">
                     <div class="error-message" id="passwordError"></div>
 
                     
@@ -54,8 +70,8 @@
                     <div class="error-message" id="emptyInputsError"></div>
                     <input type="submit" name="editBtn" value="save">
                 </form>
-                <?php
-                 include_once './registerController.php';?>
+                <!-- <?php
+                 include_once './registerController.php';?> -->
             </div>
             
 
@@ -63,19 +79,7 @@
     </main>
 
 
-    <?php 
-        if(isset($_POST['editBtn'])){
-            $id = $user['ID'];
-            $fname = $_POST['fname'];
-            $phoneNumber = $_POST['phoneNumber'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-           
-
-            $userRepository->updateUser($ID,$fname,$phoneNumber,$email,$password);
-            header("location:dashboard.php");
-        }
-    ?>
+    
 
 </body>
 </html>

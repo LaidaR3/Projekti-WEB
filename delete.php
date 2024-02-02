@@ -1,5 +1,5 @@
 <?php
-$userId = $_GET['ID'];
+$userId = $_GET['id'];
 include_once 'userRepository.php';
 
 $userRepository = new UserRepository();
