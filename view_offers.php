@@ -1,4 +1,29 @@
 
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Check if the user has admin or user role
+if ($_SESSION['user_role'] !== 'admin' && $_SESSION['user_role'] !== 'user') {
+    header("Location: login.php");
+    exit();
+}
+
+$conn = new mysqli("localhost", "root", "", "monvellidb");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$offers = mysqli_query($conn, "SELECT * FROM offers");
+$offers = mysqli_fetch_all($offers, MYSQLI_ASSOC);
+
+mysqli_close($conn);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -112,7 +137,8 @@
                     <?php
                         // Display the image if available
                         if (!empty($offer['image'])) {
-                            $baseUrl = "http://localhost/Projekti-WEB";    $imagePath = $offer['image'];
+                            $baseUrl = "http://localhost/Projekti-WEB"; 
+                               $imagePath = $offer['image'];
                             $imageUrl = $baseUrl . '/' . $imagePath;
                             echo '<img src="' . $imageUrl . '" alt="Offer Image" style="max-width: 30%;">';
                         }
