@@ -1,31 +1,33 @@
 <?php
-session_start();
 
-include 'databaseConnection.php';
-$databaseConnection = new DatabaseConnection();
-$pdo = $databaseConnection->startConnection();
+ini_set('session.gc_maxlifetime', 30);
+    session_start();
 
-if (isset($_POST['submit-form'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $message = '';
+    include 'databaseConnection.php';
+    $databaseConnection = new DatabaseConnection();
+    $pdo = $databaseConnection->startConnection();
 
-    $query = $pdo->prepare('SELECT * FROM user WHERE email = :email');
-    $query->bindParam(':email', $email);
-    $query->execute();
+    if (isset($_POST['submit-form'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $message = '';
 
-    $user = $query->fetch();
+        $query = $pdo->prepare('SELECT * FROM user WHERE email = :email');
+        $query->bindParam(':email', $email); 
+        $query->execute();
 
-    if ($user && $password == $user['password']) {
-        // Successful login
-        $_SESSION['user_id'] = $user['ID'];
-        $_SESSION['user_role'] = (in_array($email, ['delfinaplakolliii@gmail.com', 'rusinovcilaida13@gmail.com'])) ? 'admin' : 'user';
-        header("Location: BookNow.php");
-        exit();
-    } else {
-        //$message = 'Invalid email or password';
-    }
-}
+        $user = $query->fetch();
+
+        if ($user && $password == $user['password']) {
+            // Successful login
+            $_SESSION['user_id'] = $user['ID']; 
+            $_SESSION['user_role'] = (in_array($email, ['delfinaplakolliii@gmail.com', 'rusinovcilaida13@gmail.com'])) ? 'admin' : 'user';
+            header("Location: BookNow.php");
+            exit();
+        } else {
+            $message = 'Invalid email or password';
+        }
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +46,7 @@ if (isset($_POST['submit-form'])) {
         </div>
 
         <div class="loginforma">
-            <form id="formLogIn" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return validateForm2();">
+            <form id="formLogIn" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>" >
                 <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
                 <p id="log-in">Log In</p>
                 <label for="email">E-mail</label>
@@ -60,7 +62,7 @@ if (isset($_POST['submit-form'])) {
                 <input type="password" id="password" name="password">
                 <div class="error-message" id="passwordError"></div>
 
-                <input type="submit" id="submit-form" name="submit-form">
+                <input type="submit" id="submit-form" onclick="validateForm2()"name="submit-form">
             </form>
         </div>
     </div>
@@ -93,33 +95,34 @@ if (isset($_POST['submit-form'])) {
     </footer>
 
     <script>
-        function validateForm2() {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}\-{|[\]\\:";'<>?,./]).{8,}$/;
-            let emailInput = document.getElementById('email');
-            let passwordInput = document.getElementById('password');
+            function validateForm2() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}\-{|[\]\\:";'<>?,./]).{8,}$/;
+        let emailInput = document.getElementById('email');
+        let passwordInput = document.getElementById('password');
 
-            let emailError = document.getElementById('emailError');
-            let passwordError = document.getElementById('passwordError');
+        let emailError = document.getElementById('emailError');
+        let passwordError = document.getElementById('passwordError');
 
-            passwordError.innerText = '';
-            emailError.innerText = '';
+        passwordError.innerText = '';
+        emailError.innerText = '';
 
-            if (!emailRegex.test(emailInput.value)) {
-                emailError.innerText = 'Forma e emailit tuaj eshte invalide';
-                return false;
-            }
-            if (!passwordRegex.test(passwordInput.value)) {
-                passwordError.innerText = 'Invalid password';
-                return false;
-            }
-            alert('Welcome back!');
-            setTimeout(function(){
-                window.location.href = 'BookNow.php';
-            }, 1000);
-            //alert('You have logged in successfully');
-            return false; // Prevent form submission for testing purposes
+        if (!emailRegex.test(emailInput.value)) {
+            emailError.innerText = 'Forma e emailit tuaj eshte invalide';
+            return;
         }
-    </script>
+        if (!passwordRegex.test(passwordInput.value)) {
+            passwordError.innerText = 'Invalid password';
+            return;
+        }
+        alert('Welcome back!');
+        setTimeout(function(){
+        window.location.href = 'BookNow.php';
+    }, 1000);
+        //alert('You have logged in successfully');
+    }
+
+
+        </script>
 </body>
 </html>

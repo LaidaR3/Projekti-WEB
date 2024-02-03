@@ -5,14 +5,14 @@ class userRepository{
     private $connection;
 
     function __construct(){
-        $conn = new databaseConnection;
+        $conn = new DatabaseConnection;
         $this->connection = $conn->startConnection();
     }
 
     function insertUser($user){
         $conn = $this->connection;
 
-        $ID = $user->getId();
+        $ID = $user->getID();
         $name = $user->getFname();
         $phone = $user->getPhoneNumber();
         $email = $user->getEmail();
@@ -55,7 +55,7 @@ class userRepository{
         $sql = "SELECT * FROM user WHERE ID = ?";
 
         $statement = $conn->prepare($sql);
-        $statement->execute([$ID]);
+       
 
         return $statement->fetch();
     }
