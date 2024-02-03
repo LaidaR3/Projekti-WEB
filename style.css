@@ -1808,42 +1808,6 @@ form button{
     border-top: none;
     margin-bottom: 30px; 
 }
-/* .check-in-form {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-} */
-
-/* .check-in-form form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.check-in-form form div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 30px; 
-} */
-
-/* .check-in-form form label {
-    margin-bottom: 15px; 
-}
-#checkout{
-    width: 160px;
-}
-#checkin{
-    width: 160px 
-} */
-/*per me ju ndryshu gjatesia kur e type*/
-/* .check-in-form form input[type="date"]:focus,
-.check-in-form form input[type="number"]:focus {
-    width: 250px;
-    height: 35px; 
-    border-color: dodgerblue;
-} */
 
 .searchDates{
     display: flex;
