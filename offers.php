@@ -1,17 +1,11 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
+
+
+if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
     header("Location: login.php");
     exit();
 }
-
-// Check if the user has admin or customer role
-if ($_SESSION['user_role'] !== 'admin' && $_SESSION['user_role'] !== 'customer') {
-    header("Location: login.php");
-    exit();
-}
-
-
 ?>
 
 

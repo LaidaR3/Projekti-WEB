@@ -81,17 +81,17 @@
             }
 
             .offer {
-        background-color: rgba(255, 255, 255, 0.8);
-        max-width: 700px; 
-        box-sizing: border-box;
-        padding: 30px;
-        margin: 20px;
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-        cursor: pointer;
-        line-height: 2.5;
-    }
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 700px; 
+            box-sizing: border-box;
+            padding: 30px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            line-height: 2.5;
+        }
 
             .offer:hover {
                 transform: scale(1.05);

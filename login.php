@@ -1,32 +1,32 @@
 <?php
-ini_set('session.gc_maxlifetime', 30);
-session_start();
+    ini_set('session.gc_maxlifetime', 30);
+    session_start();
 
-include 'databaseConnection.php';
-$databaseConnection = new DatabaseConnection();
-$pdo = $databaseConnection->startConnection();
+    include 'databaseConnection.php';
+    $databaseConnection = new DatabaseConnection();
+    $pdo = $databaseConnection->startConnection();
 
-if (isset($_POST['submit-form'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $message = '';
+    if (isset($_POST['submit-form'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $message = '';
 
-    $query = $pdo->prepare('SELECT * FROM user WHERE email = :email');
-    $query->bindParam(':email', $email); 
-    $query->execute();
+        $query = $pdo->prepare('SELECT * FROM user WHERE email = :email');
+        $query->bindParam(':email', $email); 
+        $query->execute();
 
-    $user = $query->fetch();
+        $user = $query->fetch();
 
-    if ($user && $password == $user['password']) {
-        // Successful login
-        $_SESSION['user_id'] = $user['ID']; 
-        $_SESSION['user_role'] = (in_array($email, ['delfinaplakolliii@gmail.com', 'rusinovcilaida13@gmail.com'])) ? 'admin' : 'user';
-        header("Location: BookNow.php");
-        exit();
-    } else {
-        $message = 'Invalid email or password';
-    }
-} 
+        if ($user && $password == $user['password']) {
+            // Successful login
+            $_SESSION['user_id'] = $user['ID']; 
+            $_SESSION['user_role'] = (in_array($email, ['delfinaplakolliii@gmail.com', 'rusinovcilaida13@gmail.com'])) ? 'admin' : 'user';
+            header("Location: BookNow.php");
+            exit();
+        } else {
+            $message = 'Invalid email or password';
+        }
+    } 
 ?>
 
 
@@ -35,8 +35,8 @@ if (isset($_POST['submit-form'])) {
 
     
     
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,5 +137,5 @@ if (isset($_POST['submit-form'])) {
 
 
         </script>
-    </body>
-    </html>
+</body>
+</html>
