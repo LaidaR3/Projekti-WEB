@@ -287,6 +287,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
             }
             alert('Form submitted successfully!');
             }
+
+       
+        
+            function setMinDate() {
+                // E merr daten aktuale
+                let currentDate = new Date().toISOString().split('T')[0];
+                
+                document.getElementById('checkin').setAttribute('min', currentDate);
+                document.getElementById('checkout').setAttribute('min', currentDate);
+            }
+
+        
+            window.onload = setMinDate;
+ 
         </script>
     </main>
 </body>
