@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="signUp-section">
             <div class="signUp-form">
                 <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
-                <form id="myform1" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>">
+                <form id="myform1" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return validateForm()">
 
                     <!-- First Name -->
                     <label for="firstname">Full Name</label>
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="error-message" id="passwordConfirmError"></div>
 
                     <div class="error-message" id="emptyInputsError"></div>
-                    <input type="submit" id="submit-form" onclick="validateForm()" name="submit-form">
+                    <input type="submit" id="submit-form"  name="submit-form">
 
                 </form>
                 <?php
