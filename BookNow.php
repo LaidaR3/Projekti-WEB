@@ -75,7 +75,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
                        <li><a href="signUp.php" target="_blank">Sign-up</a></li>
                     <?php endif; ?> 
                        
-                       <li><a href="logout.php">Logout</a></li>
+                    <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] !== null): ?>
+                           <li><a href="logout.php">Logout</a></li>
+                       <?php endif; ?>
                        
             </ul>
         </div>
@@ -283,21 +285,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
                 guestError.innerText = 'Number of guests cannot be negative.';
                 return;
             }
-
-           
-
             alert('Form submitted successfully!');
             }
         </script>
-            
-
-
-
-
-    
-        
-
     </main>
-
 </body>
 </html>
