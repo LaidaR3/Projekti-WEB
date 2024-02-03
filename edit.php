@@ -1,25 +1,30 @@
 <?php
   
-    $userId = $_GET['id'];
-    include 'userRepository.php';
-
-    
-    
-    $userRepository = new UserRepository();
-    
-    $user  = $userRepository->getUserById($userId);
-
-    if(isset($_POST['editBtn'])){
-        $ID = $user['ID'];
-        $fname = $_POST['fname'];
-        $phoneNumber = $_POST['phoneNumber'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-       
-
-        $userRepository->updateUser($ID,$fname,$phoneNumber,$email,$password);
-        header("location:dashboard.php");
-    }
+  $userID = $_GET['id'];
+  include 'userRepository.php';
+  
+  $userRepository = new UserRepository();
+  
+  $user = $userRepository->getUserById($userID);
+  
+  if (!is_array($user)) {
+      // Handle the case when $user is not an array (perhaps user not found)
+      echo "User not found!";
+      // You can redirect the user, display an error message, or take other appropriate actions
+      exit();
+  }
+  
+  if (isset($_POST['editBtn'])) {
+      $ID = $user['ID'];
+      $fname = $_POST['fname'];
+      $phoneNumber = $_POST['phoneNumber'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+  
+      $userRepository->updateUser($ID, $fname, $phoneNumber, $email, $password);
+      header("location:dashboard.php");
+  }
+  
 
 
 ?>

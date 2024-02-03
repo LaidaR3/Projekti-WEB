@@ -55,7 +55,7 @@ class userRepository{
         $sql = "SELECT * FROM user WHERE ID = ?";
 
         $statement = $conn->prepare($sql);
-       
+        $statement->execute([$ID]);
 
         return $statement->fetch();
     }
