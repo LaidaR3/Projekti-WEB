@@ -5,6 +5,12 @@ include 'databaseConnection.php';
 $databaseConnection = new DatabaseConnection();
 $pdo = $databaseConnection->startConnection();
 
+if (!isset($_SESSION['user_id']) || $_SESSION['user_id'] === null) {
+    // Redirect to the sign-up page
+    header("Location: signup.php");
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] !== null) {
         $userID = $_SESSION['user_id'];  
@@ -13,6 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
         var_dump($_SESSION);  
         exit;
     }
+
+    
 
     $nameb = $_POST['nameb'];
     $surnameb = $_POST['surnameb'];
@@ -293,7 +301,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
             function setMinDate() {
                 // E merr daten aktuale
                 let currentDate = new Date().toISOString().split('T')[0];
-                
+
                 document.getElementById('checkin').setAttribute('min', currentDate);
                 document.getElementById('checkout').setAttribute('min', currentDate);
             }
