@@ -9,10 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST['password'];
 
         
-        
-    } else {
-        echo 'Ju nuk keni shtypur butonin Submit';
-    }
+        header("Location: login.php");
+        exit();
+    } 
+
+    
 }
 ?>
 
@@ -64,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="error-message" id="passwordConfirmError"></div>
 
                     <div class="error-message" id="emptyInputsError"></div>
-                    <input type="submit" id="submit-form"  name="submit-form">
+                    <input type="submit" id="submit-form" name="submit-form">
 
                 </form>
                 <?php
@@ -111,75 +112,73 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<script>
+    <script>
     let fnameRegex = /^[A-Z][a-z]{1,20}$/;
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,20}$/;
+    let passwordRegex = /^.{8,}$/;  // Updated password regex
     let phoneRegex = /^\+?\d{1,4}-?\d{1,4}-?\d{1,9}$/;
 
     function validateForm() {
-        let fnameInput = document.getElementById('fname');
-        let emailInput = document.getElementById('email');
-        let phoneInput = document.getElementById('phoneNumber');
-        let passwordInput = document.getElementById('password');
-        let passwordConfInput = document.getElementById('passwordConfirm');
+    let fnameInput = document.getElementById('fname');
+    let emailInput = document.getElementById('email');
+    let phoneInput = document.getElementById('phoneNumber');
+    let passwordInput = document.getElementById('password');
+    let passwordConfInput = document.getElementById('passwordConfirm');
 
-        let fnameError = document.getElementById('fnameError');
-        let emailError = document.getElementById('emailError');
-        let phoneError = document.getElementById('phoneError');
-        let passwordError = document.getElementById('passwordError');
-        let passwordConfirmError = document.getElementById('passwordConfirmError');
-        let emptyInputsError = document.getElementById('emptyInputsError');
+    let fnameError = document.getElementById('fnameError');
+    let emailError = document.getElementById('emailError');
+    let phoneError = document.getElementById('phoneError');
+    let passwordError = document.getElementById('passwordError');
+    let passwordConfirmError = document.getElementById('passwordConfirmError');
+    let emptyInputsError = document.getElementById('emptyInputsError');
 
-        fnameError.innerText = '';
-        phoneError.innerText = '';
-        emailError.innerText = '';
-        passwordError.innerText = '';
-        passwordConfirmError.innerText = '';
-        emptyInputsError.innerText = '';
+    fnameError.innerText = '';
+    phoneError.innerText = '';
+    emailError.innerText = '';
+    passwordError.innerText = '';
+    passwordConfirmError.innerText = '';
+    emptyInputsError.innerText = '';
 
-        let formIsValid = true;  
-    
+    let formIsValid = true;
 
+    if (fnameInput.value === '' || emailInput.value === '' || phoneInput.value === '' || passwordInput.value === '' || passwordConfInput.value === '') {
+        emptyInputsError.innerText = 'All fields are required!';
+        formIsValid = false;
+    }
 
-        if (fnameInput.value === '' || emailInput.value === '' || phoneInput.value === '' || passwordInput.value === '' || passwordConfInput.value === '') {
-            emptyInputsError.innerText = 'All fields are required!';
-            formIsValid = false; 
-
+    if (formIsValid) {
         if (!fnameRegex.test(fnameInput.value)) {
             fnameError.innerText = 'Your first and last name should start with a capital letter!';
-            formIsValid = false;  
+            formIsValid = false;
         }
 
         if (!emailRegex.test(emailInput.value)) {
             emailError.innerText = 'Invalid email address!';
-            formIsValid = false;  
+            formIsValid = false;
         }
 
         if (!phoneRegex.test(phoneInput.value)) {
             phoneError.innerText = 'Phone number is invalid';
-            formIsValid = false;  
+            formIsValid = false;
         }
 
         if (!passwordRegex.test(passwordInput.value)) {
             passwordError.innerText = 'Password must be 8-20 characters long and include at least one lowercase letter, one uppercase letter, and one digit!';
-            formIsValid = false;  
+            formIsValid = false;
         }
 
         if (passwordInput.value !== passwordConfInput.value) {
             passwordConfirmError.innerText = 'Passwords do not match!';
-            formIsValid = false;  
-        }
-
-        if (formIsValid) {
-            alert('Form submitted successfully!');
-                setTimeout(function () {
-                    window.location.href = 'login.php';
-                }, 1000);
-            }
+            formIsValid = false;
         }
     }
+
+    return formIsValid;
+
+}
+
 </script>
+
 
 
 
