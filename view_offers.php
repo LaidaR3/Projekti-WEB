@@ -82,7 +82,7 @@
 
             .offer {
         background-color: rgba(255, 255, 255, 0.8);
-        max-width: 800px; /* Reduced from 30% */
+        max-width: 700px; 
         box-sizing: border-box;
         padding: 30px;
         margin: 20px;
@@ -101,6 +101,9 @@
                 margin-bottom: 10px;
             }
 
+            .offers-container{
+                text-align:center;
+            }
             .offer-details {
                 font-size: 14px;
             }
@@ -159,7 +162,7 @@
                                 $baseUrl = "http://localhost/Projekti-WEB"; 
                                 $imagePath = $offer['image'];
                                 $imageUrl = $baseUrl . '/' . $imagePath;
-                                echo '<img src="' . $imageUrl . '" alt="Offer Image" style="max-width: 30%;">';
+                                echo '<img src="' . $imageUrl . '" alt="Offer Image" style="max-width: 50%;" >';
                             }
                         ?>
                         <div class="offer-details">
