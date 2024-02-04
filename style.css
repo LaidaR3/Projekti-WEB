@@ -830,7 +830,7 @@ ol{
   .revealing-text {
     overflow: hidden;
     white-space: nowrap;
-    animation: revealText 4s steps(20) 1; /* Adjust the duration and steps as needed */
+    animation: revealText 4s steps(20) 1; 
   }
 #DESCRIPTION{
     font-family: 'Crimson Text', serif;
@@ -2067,11 +2067,11 @@ form button{
 .amenities ol li {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Adjust the margin-bottom as needed */
+    margin-bottom: 10px; 
 }
 
 .amenities ol li img {
-    margin-right: 10px; /* Adjust the margin between the image and text */
+    margin-right: 10px; 
     height: 30px;
 }
 #amenities-header{
@@ -2119,8 +2119,8 @@ form button{
     margin-top: 0px;
     position: relative;
     background-image: url('imgs/signUp4.jpg');
-    background-size: 100% 100%; /* Cover the entire div */
-        width: 700px; /* Adjust width as needed */
+    background-size: 100% 100%; 
+        width: 700px; 
         height: 800px;
         /* margin-left: 20px; */
         margin-right: 30px;
