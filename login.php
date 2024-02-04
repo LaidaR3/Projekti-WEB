@@ -24,9 +24,9 @@ ini_set('session.gc_maxlifetime', 30);
             $_SESSION['user_role'] = (in_array($email, ['delfinaplakolliii@gmail.com', 'rusinovcilaida13@gmail.com'])) ? 'admin' : 'user';
             header("Location: BookNow.php");
             exit();
-        } else {
-            $message = 'Invalid email or password';
-        }
+        } //else {
+            //$message = 'Invalid email or password';
+        //}
     } 
 ?>
 
@@ -46,24 +46,25 @@ ini_set('session.gc_maxlifetime', 30);
         </div>
 
         <div class="loginforma">
-            <form id="formLogIn" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>" >
-                <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
-                <p id="log-in">Log In</p>
-                <label for="email">E-mail</label>
-                <input type="text" id="email" name="email">
-                <div class="error-message" id="emailError"></div>
-                <?php if (!empty($message)) : ?>
-                    <div class="alert alert-primary">
-                        <?php echo $message ?>
-                    </div>
-                <?php endif; ?>
+        <form id="formLogIn" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return validateForm2();">
+    <a href="index.php"><img src="./imgs/logo1.png" height="40px"></a><br>
+    <p id="log-in">Log In</p>
+    <label for="email">E-mail</label>
+    <input type="text" id="email" name="email">
+    <div class="error-message" id="emailError"></div>
+    <?php if (!empty($message)) : ?>
+        <div class="alert alert-primary">
+            <?php echo $message ?>
+        </div>
+    <?php endif; ?>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-                <div class="error-message" id="passwordError"></div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <div class="error-message" id="passwordError"></div>
 
-                <input type="submit" id="submit-form" onclick="validateForm2()"name="submit-form">
-            </form>
+    <input type="submit" id="submit-form" name="submit-form">
+</form>
+
         </div>
     </div>
 
@@ -95,32 +96,32 @@ ini_set('session.gc_maxlifetime', 30);
     </footer>
 
     <script>
-            function validateForm2() {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}\-{|[\]\\:";'<>?,./]).{8,}$/;
-        let emailInput = document.getElementById('email');
-        let passwordInput = document.getElementById('password');
+     function validateForm2() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^.{8,}$/;
+    let emailInput = document.getElementById('email');
+    let passwordInput = document.getElementById('password');
 
-        let emailError = document.getElementById('emailError');
-        let passwordError = document.getElementById('passwordError');
+    let emailError = document.getElementById('emailError');
+    let passwordError = document.getElementById('passwordError');
 
-        passwordError.innerText = '';
-        emailError.innerText = '';
+    passwordError.innerText = '';
+    emailError.innerText = '';
 
-        if (!emailRegex.test(emailInput.value)) {
-            emailError.innerText = 'Forma e emailit tuaj eshte invalide';
-            return;
-        }
-        if (!passwordRegex.test(passwordInput.value)) {
-            passwordError.innerText = 'Invalid password';
-            return;
-        }
-        alert('Welcome back!');
-        setTimeout(function(){
+    if (!emailRegex.test(emailInput.value)) {
+        emailError.innerText = 'Invalid email format';
+        return false;
+    }
+    if (!passwordRegex.test(passwordInput.value)) {
+        passwordError.innerText = 'Invalid password';
+        return false;
+    }
+    alert('Welcome back!');
+    setTimeout(function(){
         window.location.href = 'BookNow.php';
     }, 1000);
-        //alert('You have logged in successfully');
-    }
+    return true;
+}
 
 
         </script>
