@@ -41,11 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitbtn'])) {
     $stmt->bindParam(7, $checkout);
 
     
-    if ($stmt->execute()) {
-        echo "Booking successful!";
-    } else {
-        echo "Error: " . $stmt->errorInfo()[2]; 
-    }
+    // if ($stmt->execute()) {
+    //     echo "Booking successful!";
+    // } else {
+    //     echo "Error: " . $stmt->errorInfo()[2]; 
+    // }
 }
 ?>
 
