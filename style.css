@@ -680,7 +680,7 @@ footer{
     padding-bottom: 30px;
 }
 
-
+/* END - HOME PAGE */
 
 
 
@@ -784,19 +784,7 @@ ol{
     justify-content: center;
     margin-top: 6%;
 }
-/*button {
-    
-    background-color: rgb(199, 99, 42);
-    border: none;
-    color: white;
-    padding: 40px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 10%;
-}*/
+
 .roomsIMG{
     display: flex;
     background-image: url(imgs/tryroms1.jpg);
@@ -894,6 +882,9 @@ ol{
     justify-content: right;
     font-size: small;
 } */
+
+
+/* Perfundimi AboutUs */
 /*ROOMS-ndryshime ne main foto*/
 .header-Rooms{
     display:  flex;
@@ -1197,6 +1188,9 @@ ol{
     font-weight: 100;
     
 }
+
+/* End of rooms Page */
+
 /*ROOM 1*/
 .room1-fotot{
     display: flex;
@@ -1270,6 +1264,9 @@ ol{
     margin-bottom: 40px;
     color: #363231;
 } */
+
+
+
 /*ROOM2*/
 
 .room2-fotot{
@@ -1389,6 +1386,8 @@ ol{
     font-size: large;
 
 }
+/* End of Rooms */
+
 
 
 /* Contact Us */
@@ -1610,6 +1609,9 @@ form button{
     transition: 0.3s;
 }
 
+/* End of Contact Us Page */
+
+
 /*Pool and Spa*/
 
 .mainImg-ps{
@@ -1744,6 +1746,10 @@ form button{
     color: #ef8346;
     font-style: italic;
 }
+
+/* End of Pool and Spa Page */
+
+
 
 /*Book Now Page*/
 
@@ -2094,9 +2100,11 @@ form button{
 }
 
 .room3-fotot img {
-    margin-right: 50px; /* Adjust the margin as needed */
+    margin-right: 50px; 
 }
 /*SLIDESHOW*/
+
+/* End of Book Now Page */
 
 /*log in*/
 
@@ -2193,6 +2201,8 @@ input[type=text], input[type=password] {
     margin-top: 10px;
 }
 
+/* End of Log In */
+
 
 /* Sign Up Page */
 
@@ -2282,12 +2292,15 @@ input[type=text], input[type=password] {
     padding-right: 27px;
     padding-left: 27px;
     padding-bottom: 8px;
-  }
+}
   
-  #myBtn:hover {
+#myBtn:hover {
     transform: scale(1.1); 
     
-  }
+}
+
+/*End Sign Up  */
+
 
 /* Dashboard */
 
@@ -2345,10 +2358,6 @@ input[type=text], input[type=password] {
 
 }
 
-
-
-
-
   .check-in-form-edit form{
     display: flex;
     flex-direction: column;
@@ -2365,5 +2374,5 @@ input[type=text], input[type=password] {
     justify-content:center ;
   }
 
-
+/* END */
 
