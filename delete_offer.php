@@ -22,7 +22,7 @@ if (isset($_GET['offer_id'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Implement the deletion logic here
+    
     $deleteQuery = "DELETE FROM offers WHERE offersID = $offerId";
     if ($conn->query($deleteQuery) === TRUE) {
         echo "Offer deleted successfully";
