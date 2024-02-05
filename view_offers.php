@@ -208,5 +208,11 @@
                 formContainer.style.display = (formContainer.style.display === 'none') ? 'block' : 'none';
             }
         </script>
+        <?php
+  
+        if (!empty($successMessage)) {
+            echo '<script>alert("' . $successMessage . '");</script>';
+        }
+    ?>
     </body>
     </html>
