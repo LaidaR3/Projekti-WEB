@@ -17,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_update'])) {
     $name = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
-    $edited_by = $_POST['edited_by'];  // Get the value selected in the form
+    $edited_by = $_POST['edited_by']; 
 
-    // Update the offer in the database
+  
     $updateQuery = "UPDATE offers SET name='$name', description='$description', price='$price', edited_by='$edited_by' WHERE offersID='$offer_id'";
     
     if (mysqli_query($conn, $updateQuery)) {

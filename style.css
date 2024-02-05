@@ -699,17 +699,7 @@ footer{
     justify-content: center;
     flex-direction: column;
 }
-#foodid{
-    
-    display: flex;
-    justify-content: center;
-    font-family: 'Crimson Text', serif;
-    font-size: 30px;
-    margin-top: 70px;
-    color: black;
-    font-weight: 100;
-    line-height: 2;
-}
+
 #header1{
     margin-top: 85px;
     margin-left: 50px;
@@ -805,7 +795,6 @@ ol{
     justify-content: space-between;
     justify-content: space-around;
 }
-
 @keyframes revealText {
     from {
       width: 0;
@@ -820,7 +809,18 @@ ol{
     white-space: nowrap;
     animation: revealText 4s steps(20) 1; 
   }
-#DESCRIPTION{
+  #foodid{
+    
+    display: flex;
+    justify-content: center;
+    font-family: 'Crimson Text', serif;
+    font-size: 30px;
+    margin-top: 70px;
+    color: black;
+    font-weight: 100;
+    line-height: 2;
+}
+/* #DESCRIPTION{
     font-family: 'Crimson Text', serif;
     margin-top: 80px;
     display: flex;
@@ -833,7 +833,7 @@ ol{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+} */
 /* .ratings{
     margin-top: 80px;
     font-size: x-large;
