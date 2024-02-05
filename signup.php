@@ -1,20 +1,10 @@
 <?php
 include_once 'registerController.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["submit-form"])) {
-        $fname = $_POST['fname'];
-        $phoneNumber = $_POST['phoneNumber'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
 
-        
-        header("Location: login.php");
-        exit();
-    } 
 
-    
-}
+
+
 ?>
 
 

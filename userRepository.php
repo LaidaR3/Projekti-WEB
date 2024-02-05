@@ -25,6 +25,16 @@ class userRepository{
             
         echo "<script> alert('User has been inserted successfuly!'); </script>";
     }
+    function getUserByEmail($email) {
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM user WHERE email = ?";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$email]);
+
+        return $statement->fetch();
+    }
 
     function getAllUsers(){
         $conn = $this->connection;
