@@ -16,13 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        // Check if the user with the provided email already exists
         if (userAlreadyExists($email)) {
             echo "User with this email already exists!";
             exit();
         }
 
-        // Continue with the registration process if the user is not already registered
         $user = new user(null, $fname, $phoneNumber, $email, $password);
         $userRepository = new userRepository();
         $userRepository->insertUser($user);
